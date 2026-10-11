@@ -35,7 +35,7 @@ const ICONS = {
 };
 
 /* ─── Brand Logo SVG ──────────────────────────────────── */
-const LOGO_SVG = `<svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+const LOGO_SVG = `<svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect x="15" y="35" width="70" height="55" rx="10" fill="var(--primary)"/>
     <line x1="35" y1="35" x2="35" y2="90" stroke="var(--secondary)" stroke-width="2" opacity="0.3"/>
     <line x1="50" y1="35" x2="50" y2="90" stroke="var(--secondary)" stroke-width="2" opacity="0.3"/>
@@ -151,7 +151,7 @@ function buildNavbar() {
             <a href="index.html" class="nav-logo" aria-label="Crepe & Waffle Café Home">
                 ${LOGO_SVG}
                 <div class="nav-logo-text">
-                    <span class="brand-top">CRÊPE</span>
+                    <span class="brand-top">CREPE</span>
                     <span class="brand-bottom">& Waffle</span>
                 </div>
             </a>
@@ -245,11 +245,11 @@ function buildFooter() {
                     <a href="index.html" class="nav-logo" aria-label="Home">
                         ${LOGO_SVG}
                         <div class="nav-logo-text">
-                            <span class="brand-top" style="color:#fff;">CRÊPE</span>
+                            <span class="brand-top">CREPE</span>
                             <span class="brand-bottom">& Waffle</span>
                         </div>
                     </a>
-                    <p>Handcrafted French crêpes and Belgian waffles made with premium ingredients. Serving sweet and savory perfection since 2018.</p>
+                    <p>Handcrafted French crepes and Belgian waffles made with premium ingredients. Serving sweet and savory perfection since 2018.</p>
                     <div class="footer-socials">
                         <a href="#" class="footer-social-link" aria-label="Facebook">${ICONS.facebook}</a>
                         <a href="#" class="footer-social-link" aria-label="Instagram">${ICONS.instagram}</a>
@@ -295,7 +295,7 @@ function buildFooter() {
             </div>
 
             <div class="footer-bottom">
-                <p class="footer-copyright">&copy; ${new Date().getFullYear()} Crêpe & Waffle Café. All rights reserved.</p>
+                <p class="footer-copyright">&copy; ${new Date().getFullYear()} Crepe & Waffle Café. All rights reserved.</p>
                 <div class="footer-bottom-links">
                     <a href="coming-soon.html">Privacy Policy</a>
                     <a href="coming-soon.html">Terms of Service</a>
@@ -400,6 +400,25 @@ function initCountdown() {
     setInterval(update, 1000);
 }
 
+/* ─── FAQ ACCORDION ───────────────────────────────────── */
+function initFaqAccordion() {
+    document.addEventListener('click', (e) => {
+        const questionBtn = e.target.closest('.faq-question');
+        if (!questionBtn) return;
+        const item = questionBtn.closest('.faq-item');
+        if (!item) return;
+        const parent = item.parentElement;
+        
+        const wasActive = item.classList.contains('active');
+        if (parent) {
+            parent.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+        }
+        if (!wasActive) {
+            item.classList.add('active');
+        }
+    });
+}
+
 /* ─── INIT ALL ────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
     buildNavbar();
@@ -409,4 +428,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeaderScroll();
     initMenuTabs();
     initCountdown();
+    initFaqAccordion();
 });

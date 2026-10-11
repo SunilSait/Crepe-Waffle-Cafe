@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Crêpe & Waffle Café for enquiries, feedback, or catering requests. We'd love to hear from you.">
-    <title>Contact Us — Crêpe & Waffle Café</title>
+    <meta name="description" content="Contact Crepe & Waffle Café for enquiries, feedback, or catering requests. We'd love to hear from you.">
+    <title>Contact Us — Crepe & Waffle Café</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
     <script src="components.js" defer></script>
@@ -54,13 +54,12 @@
                             <p>hello@crepeandwaffle.com<br>We reply within 24 hours</p>
                         </div>
                     </div>
-                    <div class="contact-info-card fade-up">
-                        <div class="contact-info-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                        </div>
-                        <div class="contact-info-text">
-                            <h4>Business Hours</h4>
-                            <p>Mon–Fri: 7 AM – 9 PM<br>Sat–Sun: 8 AM – 10 PM</p>
+
+                    <div class="contact-image-card fade-up">
+                        <img src="assets/images/cafe-interior.jpg" alt="Cozy Parisian café interior ambiance" loading="lazy">
+                        <div class="contact-image-overlay">
+                            <span class="contact-image-tag">Cozy Parisian Ambiance</span>
+                            <p>Warm lighting, billig griddles, and fresh espresso. Walk-ins are always warmly welcomed.</p>
                         </div>
                     </div>
                 </div>
@@ -99,6 +98,41 @@
                         </div>
                         <button type="submit" class="btn btn-primary w-full">Send Message</button>
                     </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== LIVE MAP SECTION ====== -->
+    <section class="map-section" id="map-section">
+        <div class="container text-center">
+            <span class="section-label fade-up">Our Location</span>
+            <h2 class="section-title fade-up">Visit Our Downtown Flagship</h2>
+            <p class="section-desc fade-up" style="max-width:580px;margin:0 auto 10px;">Drop in anytime to experience our freshly griddled Parisian crepes and authentic Belgian waffles.</p>
+            <div class="map-wrap fade-up">
+                <iframe 
+                    class="live-map-frame"
+                    title="Crepe & Waffle Café Downtown Location"
+                    src="https://maps.google.com/maps?q=245+Main+Street,+Downtown&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div class="map-floating-card">
+                    <span class="map-floating-badge">Downtown Flagship</span>
+                    <h4>Crepe & Waffle Café</h4>
+                    <p class="map-floating-addr">245 Main Street, Downtown</p>
+                    <div class="map-floating-meta">
+                        <span>🕒 Mon–Sun: 7:00 AM – 9:00 PM</span>
+                        <span>📞 (555) 123-4567</span>
+                    </div>
+                    <a href="https://maps.google.com/?q=245+Main+Street,+Downtown" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                        <span>Open in Google Maps</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    </a>
                 </div>
             </div>
         </div>

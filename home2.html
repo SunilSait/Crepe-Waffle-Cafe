@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Crêpe & Waffle Café Premium — Experience our artisan crêpes and Belgian waffles in a luxurious setting. Explore our premium flavors and chef's specials.">
-    <title>Crêpe & Waffle Café — Premium Experience</title>
+    <meta name="description" content="Crepe & Waffle Café Premium — Experience our artisan crepes and Belgian waffles in a luxurious setting. Explore our premium flavors and chef's specials.">
+    <title>Crepe & Waffle Café — Premium Experience</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="style.css">
     <script src="components.js" defer></script>
@@ -12,30 +12,112 @@
 <body>
     <div id="navbar-placeholder"></div>
 
-    <!-- ====== HERO 2 — SPLIT LAYOUT ====== -->
+    <!-- ====== HERO 2 — 3-SLIDE SPLIT CAROUSEL ====== -->
     <section class="hero2-section" id="hero2-section">
-        <div class="hero2-grid">
-            <div class="hero2-text">
-                <span class="section-label fade-up">Premium Collection</span>
-                <h1 class="fade-up">The Art of <span class="hero-title-accent">Indulgence,</span> Perfected</h1>
-                <p class="fade-up">Discover our curated collection of handcrafted crêpes and artisan waffles — each a masterpiece of flavor, texture, and presentation, using only the finest ingredients from around the world.</p>
-                <div class="hero-ctas fade-up">
-                    <a href="menu.html" class="btn btn-primary btn-lg">Discover Flavors</a>
-                    <a href="catering.html" class="btn btn-secondary btn-lg">Book Catering</a>
+        <div class="hero2-slider" id="hero2-slider">
+            <!-- Slide 1: Premium Indulgence -->
+            <div class="hero2-slide active" data-index="0">
+                <div class="hero2-grid">
+                    <div class="hero2-text">
+                        <span class="section-label">Premium Collection</span>
+                        <h1>The Art of <span class="hero-title-accent">Indulgence,</span> Perfected</h1>
+                        <p>Discover our curated collection of handcrafted crepes and artisan waffles — each a masterpiece of flavor, texture, and presentation, using only the finest ingredients from around the world.</p>
+                        <div class="hero-ctas">
+                            <a href="menu.html" class="btn btn-primary btn-lg">Discover Flavors</a>
+                            <a href="catering.html" class="btn btn-secondary btn-lg">Book Catering</a>
+                        </div>
+                    </div>
+                    <div class="hero2-img-wrap">
+                        <img src="assets/images/hero2-premium.jpg" alt="Premium artisan brunch spread with crepes and waffles" loading="eager">
+                        <div class="hero2-floating-badge">
+                            <div class="hero2-floating-badge-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <div class="hero2-floating-badge-text">
+                                <strong>4.9 / 5.0 Rating</strong>
+                                <span>12,000+ Happy Guests</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="hero2-img-wrap fade-up">
-                <img src="assets/images/hero2-premium.jpg" alt="Premium artisan brunch spread with crepes and waffles" loading="eager">
-                <div class="hero2-floating-badge">
-                    <div class="hero2-floating-badge-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+
+            <!-- Slide 2: Golden Belgian Waffles -->
+            <div class="hero2-slide" data-index="1">
+                <div class="hero2-grid">
+                    <div class="hero2-text">
+                        <span class="section-label">Artisan Belgian Waffles</span>
+                        <h1>Crispy Outside, <span class="hero-title-accent">Cloud-Soft</span> Inside</h1>
+                        <p>Crafted with imported pearl sugar from Liege and pure vanilla bean batter, caramelized to golden perfection on authentic cast-iron griddles with farm-fresh berries and velvety cream.</p>
+                        <div class="hero-ctas">
+                            <a href="menu.html" class="btn btn-primary btn-lg">Explore Waffles</a>
+                            <a href="locations.html" class="btn btn-secondary btn-lg">Find a Location</a>
+                        </div>
                     </div>
-                    <div class="hero2-floating-badge-text">
-                        <strong>4.9 / 5.0 Rating</strong>
-                        <span>12,000+ Happy Guests</span>
+                    <div class="hero2-img-wrap">
+                        <img src="assets/images/belgian-waffle-berry.jpg" alt="Authentic Belgian berry waffle with fresh cream" loading="lazy">
+                        <div class="hero2-floating-badge">
+                            <div class="hero2-floating-badge-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                            </div>
+                            <div class="hero2-floating-badge-text">
+                                <strong>Liege Pearl Sugar</strong>
+                                <span>Authentic Belgian Recipe</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Slide 3: Bespoke Catering & Live Stations -->
+            <div class="hero2-slide" data-index="2">
+                <div class="hero2-grid">
+                    <div class="hero2-text">
+                        <span class="section-label">Bespoke Event Catering</span>
+                        <h1>Elevate Events with <span class="hero-title-accent">Live Stations</span></h1>
+                        <p>Bring the sensory theater of a Parisian street café directly to your wedding, corporate gala, or private brunch with our master chefs folding delicate crepes and baking waffles live on-site.</p>
+                        <div class="hero-ctas">
+                            <a href="catering.html" class="btn btn-primary btn-lg">Catering Packages</a>
+                            <a href="contact.html" class="btn btn-secondary btn-lg">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="hero2-img-wrap">
+                        <img src="assets/images/chef-making-crepe.jpg" alt="Master chef preparing crepes live for catering event" loading="lazy">
+                        <div class="hero2-floating-badge">
+                            <div class="hero2-floating-badge-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <div class="hero2-floating-badge-text">
+                                <strong>Live Chef Service</strong>
+                                <span>Private & Corporate Events</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Navigation Controls -->
+        <div class="hero2-slider-controls">
+            <button class="hero2-nav-arrow" id="hero2-prev" aria-label="Previous slide">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+
+            <div class="hero2-slider-dots" id="hero2-dots">
+                <button class="hero2-dot active" data-index="0" aria-label="Slide 1">
+                    <span class="hero2-dot-progress"></span>
+                </button>
+                <button class="hero2-dot" data-index="1" aria-label="Slide 2">
+                    <span class="hero2-dot-progress"></span>
+                </button>
+                <button class="hero2-dot" data-index="2" aria-label="Slide 3">
+                    <span class="hero2-dot-progress"></span>
+                </button>
+            </div>
+
+            <button class="hero2-nav-arrow" id="hero2-next" aria-label="Next slide">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
         </div>
     </section>
 
@@ -58,14 +140,14 @@
                         <img src="assets/images/crepe-strawberry.jpg" alt="Strawberry cream crepe" loading="lazy">
                     </div>
                     <h4>Strawberry Cloud</h4>
-                    <p>Light crêpe with fresh strawberries, Chantilly cream, and strawberry coulis.</p>
+                    <p>Light crepe with fresh strawberries, Chantilly cream, and strawberry coulis.</p>
                 </div>
                 <div class="flavor-card fade-up">
                     <div class="flavor-card-img">
                         <img src="assets/images/crepe-matcha.jpg" alt="Matcha crepe cake" loading="lazy">
                     </div>
-                    <h4>Matcha Mille Crêpe</h4>
-                    <p>Japanese-French fusion with 20 layers of matcha crêpe and pastry cream.</p>
+                    <h4>Matcha Mille Crepe</h4>
+                    <p>Japanese-French fusion with 20 layers of matcha crepe and pastry cream.</p>
                 </div>
                 <div class="flavor-card fade-up">
                     <div class="flavor-card-img">
@@ -85,8 +167,8 @@
                 <div class="chef-text slide-right">
                     <span class="section-label">Meet the Chef</span>
                     <h2 class="section-title">Passion in Every Fold</h2>
-                    <p>Our head chef trained in the finest crêperies of Paris and waffle houses of Brussels, bringing decades of expertise to every dish.</p>
-                    <blockquote>"A great crêpe is like a canvas — thin, delicate, and waiting for the perfect brushstrokes of flavor. We don't just cook, we compose."</blockquote>
+                    <p>Our head chef trained in the finest creperies of Paris and waffle houses of Brussels, bringing decades of expertise to every dish.</p>
+                    <blockquote>"A great crepe is like a canvas — thin, delicate, and waiting for the perfect brushstrokes of flavor. We don't just cook, we compose."</blockquote>
                     <p>With a commitment to quality and an eye for detail, our kitchen team crafts each creation with the precision of a master artisan.</p>
                     <a href="contact.html" class="btn btn-primary" style="margin-top:16px;">Get in Touch</a>
                 </div>
@@ -102,14 +184,14 @@
         <div class="container text-center">
             <span class="section-label fade-up">The Experience</span>
             <h2 class="section-title fade-up">More Than Just a Meal</h2>
-            <p class="section-desc fade-up">At Crêpe & Waffle Café, every visit is an experience designed to delight all your senses.</p>
+            <p class="section-desc fade-up">At Crepe & Waffle Café, every visit is an experience designed to delight all your senses.</p>
             <div class="experience-grid">
                 <div class="exp-card fade-up">
                     <div class="exp-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
                     </div>
                     <h4>Artisan Craftsmanship</h4>
-                    <p>Every crêpe and waffle is made to order using traditional techniques passed down through generations of European bakers.</p>
+                    <p>Every crepe and waffle is made to order using traditional techniques passed down through generations of European bakers.</p>
                 </div>
                 <div class="exp-card fade-up">
                     <div class="exp-icon">
@@ -129,16 +211,6 @@
         </div>
     </section>
 
-    <!-- ====== PARALLAX BANNER ====== -->
-    <section class="parallax-banner">
-        <img src="assets/images/cafe-interior.jpg" alt="Café ambiance" loading="lazy">
-        <div class="parallax-banner-overlay"></div>
-        <div class="parallax-banner-content">
-            <h2 class="fade-up">Host Your Next Event With Us</h2>
-            <p class="fade-up">From intimate brunches to grand celebrations, our catering team creates unforgettable crêpe and waffle experiences.</p>
-            <a href="catering.html" class="btn btn-primary btn-lg fade-up">Explore Catering</a>
-        </div>
-    </section>
 
     <!-- ====== REVIEWS MASONRY ====== -->
     <section class="reviews-section" id="reviews-section">
@@ -155,7 +227,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                     </div>
-                    <p class="review-text">"This place is a hidden gem! The Nutella banana crêpe is to die for. We bring our kids every Saturday morning and they absolutely love it."</p>
+                    <p class="review-text">"This place is a hidden gem! The Nutella banana crepe is to die for. We bring our kids every Saturday morning and they absolutely love it."</p>
                     <p class="review-author">Isabelle Moreau</p>
                     <p class="review-date">2 weeks ago</p>
                 </div>
@@ -167,21 +239,9 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                     </div>
-                    <p class="review-text">"Had their catering for our office retreat — the savory crêpe station was a massive hit! Professional, punctual, and delicious."</p>
+                    <p class="review-text">"Had their catering for our office retreat — the savory crepe station was a massive hit! Professional, punctual, and delicious."</p>
                     <p class="review-author">James Patterson</p>
                     <p class="review-date">1 month ago</p>
-                </div>
-                <div class="review-card fade-up">
-                    <div class="review-rating">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    </div>
-                    <p class="review-text">"The matcha mille crêpe cake is absolutely stunning. As a pastry chef myself, I appreciate the technique and precision."</p>
-                    <p class="review-author">Yuki Tanaka</p>
-                    <p class="review-date">3 weeks ago</p>
                 </div>
                 <div class="review-card fade-up">
                     <div class="review-rating">
@@ -195,30 +255,6 @@
                     <p class="review-author">Léa & Pierre Dubois</p>
                     <p class="review-date">1 week ago</p>
                 </div>
-                <div class="review-card fade-up">
-                    <div class="review-rating">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    </div>
-                    <p class="review-text">"The chicken waffle was incredible! Perfect balance of sweet and savory. Will definitely be back for more."</p>
-                    <p class="review-author">Marcus Williams</p>
-                    <p class="review-date">4 days ago</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ====== CTA BANNER ====== -->
-    <section class="cta-banner">
-        <div class="container cta-banner-content">
-            <h2 class="fade-up">Taste the Premium Difference</h2>
-            <p class="fade-up">Visit us today or order our premium catering for your next gathering.</p>
-            <div class="hero-ctas fade-up">
-                <a href="locations.html" class="btn btn-primary btn-lg">Visit a Location</a>
-                <a href="contact.html" class="btn btn-secondary btn-lg">Get in Touch</a>
             </div>
         </div>
     </section>
@@ -228,7 +264,7 @@
         <div class="container text-center">
             <span class="section-label fade-up">Follow Us</span>
             <h2 class="section-title fade-up">@CrepeAndWaffleCafe</h2>
-            <p class="section-desc fade-up">Tag us in your crêpe and waffle moments for a chance to be featured.</p>
+            <p class="section-desc fade-up">Tag us in your crepe and waffle moments for a chance to be featured.</p>
             <div class="insta-grid">
                 <div class="insta-item fade-up"><img src="assets/images/sweet-crepe-nutella.jpg" alt="Instagram post" loading="lazy"></div>
                 <div class="insta-item fade-up"><img src="assets/images/belgian-waffle-berry.jpg" alt="Instagram post" loading="lazy"></div>
@@ -240,6 +276,136 @@
         </div>
     </section>
 
+    <!-- ====== CTA BANNER (SPLIT EDITORIAL SHOWCASE) ====== -->
+    <section class="cta-banner cta-banner--split" id="cta-banner">
+        <div class="container">
+            <div class="cta-card cta-card--split fade-up">
+                <div class="cta-split-glow" aria-hidden="true"></div>
+                <div class="cta-split-content">
+                    <div class="cta-badge cta-badge--gold">
+                        <span class="cta-badge-dot cta-badge-dot--gold"></span>
+                        <span>Bespoke Catering & Events</span>
+                    </div>
+                    <h2 class="cta-title cta-title--split">Taste the Premium Difference</h2>
+                    <p class="cta-desc cta-desc--split">Visit us today or order our bespoke catering for your next gathering. Handcrafted Parisian crepes and Belgian waffles prepared to order for your unforgettable celebrations.</p>
+                    <div class="cta-buttons cta-buttons--split">
+                        <a href="locations.html" class="btn btn-cta-primary">
+                            <span>Visit a Location</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                        <a href="contact.html" class="btn btn-cta-secondary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                            <span>Get in Touch</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="cta-split-media">
+                    <div class="cta-split-img-box">
+                        <img src="assets/images/catering-spread.jpg" alt="Artisan catering spread" class="cta-split-img" loading="lazy">
+                        <div class="cta-split-floating-badge">
+                            <div class="cta-floating-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <div class="cta-floating-text">
+                                <strong>5-Star Rated Catering</strong>
+                                <span>12,000+ Guests Served</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <div id="footer-placeholder"></div>
+
+    <!-- ====== HERO 2 SLIDER SCRIPT (5-second auto-switch) ====== -->
+    <script>
+        (function initHero2Slider() {
+            const slider = document.getElementById('hero2-slider');
+            if (!slider) return;
+
+            const slides = Array.from(slider.querySelectorAll('.hero2-slide'));
+            const dots = Array.from(document.querySelectorAll('#hero2-dots .hero2-dot'));
+            const prevBtn = document.getElementById('hero2-prev');
+            const nextBtn = document.getElementById('hero2-next');
+
+            if (!slides.length) return;
+
+            let currentIndex = 0;
+            let timer = null;
+            const SLIDE_DURATION = 5000; // 5 seconds per slide
+
+            function goToSlide(index) {
+                if (index < 0) index = slides.length - 1;
+                if (index >= slides.length) index = 0;
+
+                currentIndex = index;
+
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === currentIndex);
+                });
+
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === currentIndex);
+                });
+
+                resetTimer();
+            }
+
+            function nextSlide() {
+                goToSlide(currentIndex + 1);
+            }
+
+            function prevSlide() {
+                goToSlide(currentIndex - 1);
+            }
+
+            function resetTimer() {
+                if (timer) clearInterval(timer);
+                timer = setInterval(nextSlide, SLIDE_DURATION);
+            }
+
+            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+            dots.forEach((dot) => {
+                dot.addEventListener('click', () => {
+                    const idx = parseInt(dot.getAttribute('data-index'), 10);
+                    if (!isNaN(idx)) goToSlide(idx);
+                });
+            });
+
+            // Pause on hover, resume on mouse leave
+            const heroSection = document.getElementById('hero2-section');
+            if (heroSection) {
+                heroSection.addEventListener('mouseenter', () => {
+                    if (timer) clearInterval(timer);
+                });
+                heroSection.addEventListener('mouseleave', () => {
+                    resetTimer();
+                });
+            }
+
+            // Touch swipe support for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+            slider.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            slider.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                const diff = touchEndX - touchStartX;
+                if (Math.abs(diff) > 50) {
+                    if (diff > 0) prevSlide();
+                    else nextSlide();
+                }
+            }, { passive: true });
+
+            // Start auto-rotation
+            resetTimer();
+        })();
+    </script>
 </body>
 </html>
