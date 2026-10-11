@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Something exciting is coming soon to Crêpe & Waffle Café. Stay tuned for updates!">
+    <title>Coming Soon — Crêpe & Waffle Café</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <script src="components.js" defer></script>
+</head>
+<body class="fullscreen-page">
+    <!-- Top Actions -->
+    <div class="fullscreen-top-actions">
+        <button onclick="toggleDir(event)" class="nav-icon-btn" title="Toggle Direction" aria-label="Toggle direction">
+            <span class="dir-label" style="font-size:0.625rem;font-weight:600;">RTL</span>
+        </button>
+        <button onclick="toggleTheme(event)" class="nav-icon-btn" title="Toggle Theme" aria-label="Toggle dark mode">
+            <span class="theme-icon-wrap"></span>
+        </button>
+    </div>
+
+    <div class="soon-card">
+        <!-- Logo links to home -->
+        <a href="index.html" class="auth-logo" aria-label="Home" style="margin-bottom:24px;">
+            <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="15" y="35" width="70" height="55" rx="10" fill="var(--primary)"/>
+                <line x1="35" y1="35" x2="35" y2="90" stroke="var(--secondary)" stroke-width="2" opacity="0.3"/>
+                <line x1="50" y1="35" x2="50" y2="90" stroke="var(--secondary)" stroke-width="2" opacity="0.3"/>
+                <line x1="65" y1="35" x2="65" y2="90" stroke="var(--secondary)" stroke-width="2" opacity="0.3"/>
+                <line x1="15" y1="52" x2="85" y2="52" stroke="var(--secondary)" stroke-width="2" opacity="0.3"/>
+                <line x1="15" y1="70" x2="85" y2="70" stroke="var(--secondary)" stroke-width="2" opacity="0.3"/>
+                <ellipse cx="50" cy="30" rx="28" ry="12" fill="var(--primary-light)"/>
+                <ellipse cx="50" cy="30" rx="20" ry="8" fill="var(--primary-dark)" opacity="0.4"/>
+                <circle cx="40" cy="22" r="5" fill="var(--secondary)"/>
+                <circle cx="55" cy="20" r="4" fill="var(--secondary)" opacity="0.8"/>
+                <circle cx="50" cy="15" r="3" fill="var(--secondary)" opacity="0.6"/>
+            </svg>
+            <div class="nav-logo-text">
+                <span class="brand-top">CRÊPE</span>
+                <span class="brand-bottom">& Waffle</span>
+            </div>
+        </a>
+
+        <div class="soon-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></svg>
+        </div>
+
+        <h2 class="soon-title">Something Delicious is Cooking</h2>
+        <p class="soon-desc">We're working on something special. Stay tuned for exciting new additions to Crêpe & Waffle Café.</p>
+
+        <!-- Countdown -->
+        <div class="soon-countdown">
+            <div class="countdown-item">
+                <span class="countdown-num" id="cd-days">30</span>
+                <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-num" id="cd-hours">00</span>
+                <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-num" id="cd-mins">00</span>
+                <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-num" id="cd-secs">00</span>
+                <span class="countdown-label">Seconds</span>
+            </div>
+        </div>
+
+        <!-- Notify Form -->
+        <form class="soon-notify-form" onsubmit="event.preventDefault(); alert('You will be notified when we launch!'); this.reset();">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn btn-primary">Notify Me</button>
+        </form>
+
+        <div class="soon-ctas">
+            <a href="index.html" class="btn btn-secondary">Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        initAuthPage();
+        // Initialize countdown after DOM ready
+        document.addEventListener('DOMContentLoaded', initCountdown);
+    </script>
+</body>
+</html>

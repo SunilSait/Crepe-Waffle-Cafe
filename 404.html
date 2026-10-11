@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found — Crêpe & Waffle Café. The page you're looking for doesn't exist.">
+    <title>404 — Page Not Found | Crêpe & Waffle Café</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <script src="components.js" defer></script>
+</head>
+<body class="fullscreen-page">
+    <!-- Top Actions -->
+    <div class="fullscreen-top-actions">
+        <button onclick="toggleDir(event)" class="nav-icon-btn" title="Toggle Direction" aria-label="Toggle direction">
+            <span class="dir-label" style="font-size:0.625rem;font-weight:600;">RTL</span>
+        </button>
+        <button onclick="toggleTheme(event)" class="nav-icon-btn" title="Toggle Theme" aria-label="Toggle dark mode">
+            <span class="theme-icon-wrap"></span>
+        </button>
+    </div>
+
+    <div class="error-card">
+        <!-- Logo links to home -->
+        <a href="index.html" class="auth-logo" aria-label="Home" style="margin-bottom:32px;">
+            <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="15" y="35" width="70" height="55" rx="10" fill="var(--primary)"/>
+                <line x1="35" y1="35" x2="35" y2="90" stroke="var(--secondary)" stroke-width="2" opacity="0.3"/>
+                <line x1="50" y1="35" x2="50" y2="90" stroke="var(--secondary)" stroke-width="2" opacity="0.3"/>
+                <line x1="65" y1="35" x2="65" y2="90" stroke="var(--secondary)" stroke-width="2" opacity="0.3"/>
+                <line x1="15" y1="52" x2="85" y2="52" stroke="var(--secondary)" stroke-width="2" opacity="0.3"/>
+                <line x1="15" y1="70" x2="85" y2="70" stroke="var(--secondary)" stroke-width="2" opacity="0.3"/>
+                <ellipse cx="50" cy="30" rx="28" ry="12" fill="var(--primary-light)"/>
+                <ellipse cx="50" cy="30" rx="20" ry="8" fill="var(--primary-dark)" opacity="0.4"/>
+                <circle cx="40" cy="22" r="5" fill="var(--secondary)"/>
+                <circle cx="55" cy="20" r="4" fill="var(--secondary)" opacity="0.8"/>
+                <circle cx="50" cy="15" r="3" fill="var(--secondary)" opacity="0.6"/>
+            </svg>
+            <div class="nav-logo-text">
+                <span class="brand-top">CRÊPE</span>
+                <span class="brand-bottom">& Waffle</span>
+            </div>
+        </a>
+
+        <div class="error-code">404</div>
+        <h2 class="error-title">Oops! Page Not Found</h2>
+        <p class="error-desc">The page you're looking for seems to have wandered off. Perhaps it went to grab a crêpe.</p>
+        <div class="error-ctas">
+            <a href="index.html" class="btn btn-primary">Back to Home</a>
+            <a href="menu.html" class="btn btn-secondary">View Menu</a>
+        </div>
+    </div>
+
+    <script>initAuthPage();</script>
+</body>
+</html>

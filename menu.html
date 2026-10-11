@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our full menu of sweet and savory crêpes, Belgian waffles, and café beverages at Crêpe & Waffle Café.">
+    <title>Menu — Crêpe & Waffle Café</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <script src="components.js" defer></script>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-label fade-up">Our Menu</span>
+            <h1 class="fade-up">Sweet & Savory Delights</h1>
+            <p class="fade-up">From classic French crêpes to hearty Belgian waffles — explore our full collection of handcrafted treats.</p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section">
+        <div class="container">
+            <!-- Tabs -->
+            <div class="menu-tabs">
+                <button class="menu-tab active" data-category="all">All Items</button>
+                <button class="menu-tab" data-category="sweet-crepe">Sweet Crêpes</button>
+                <button class="menu-tab" data-category="savory-crepe">Savory Crêpes</button>
+                <button class="menu-tab" data-category="sweet-waffle">Sweet Waffles</button>
+                <button class="menu-tab" data-category="savory-waffle">Savory Waffles</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid">
+                <!-- Sweet Crêpes -->
+                <div class="menu-card fade-up" data-category="sweet-crepe">
+                    <div class="menu-card-img"><img src="assets/images/sweet-crepe-nutella.jpg" alt="Nutella banana crepe" loading="lazy"></div>
+                    <div class="menu-card-body">
+                        <span class="menu-card-cat">Sweet Crêpe</span>
+                        <h3 class="menu-card-title">Nutella Banana Bliss</h3>
+                        <p class="menu-card-desc">Warm Nutella, caramelized banana slices, crushed hazelnuts, and powdered sugar.</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$12.50</span>
+                            <a href="catering.html" class="menu-card-order">Order Now <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card fade-up" data-category="sweet-crepe">
+                    <div class="menu-card-img"><img src="assets/images/crepe-strawberry.jpg" alt="Strawberry cream crepe" loading="lazy"></div>
+                    <div class="menu-card-body">
+                        <span class="menu-card-cat">Sweet Crêpe</span>
+                        <h3 class="menu-card-title">Strawberry Cloud</h3>
+                        <p class="menu-card-desc">Fresh strawberries, Chantilly cream, strawberry coulis, and powdered sugar.</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$11.00</span>
+                            <a href="catering.html" class="menu-card-order">Order Now <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card fade-up" data-category="sweet-crepe">
+                    <div class="menu-card-img"><img src="assets/images/crepe-matcha.jpg" alt="Matcha mille crepe cake" loading="lazy"></div>
+                    <div class="menu-card-body">
+                        <span class="menu-card-cat">Sweet Crêpe</span>
+                        <h3 class="menu-card-title">Matcha Mille Crêpe</h3>
+                        <p class="menu-card-desc">20-layer matcha crêpe cake with pastry cream and matcha powder dusting.</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$14.50</span>
+                            <a href="catering.html" class="menu-card-order">Order Now <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Savory Crêpes -->
+                <div class="menu-card fade-up" data-category="savory-crepe">
+                    <div class="menu-card-img"><img src="assets/images/savory-crepe-ham.jpg" alt="Ham cheese crepe" loading="lazy"></div>
+                    <div class="menu-card-body">
+                        <span class="menu-card-cat">Savory Crêpe</span>
+                        <h3 class="menu-card-title">Classic Parisienne</h3>
+                        <p class="menu-card-desc">Smoked ham, gruyère cheese, fresh spinach, and a sunny-side egg on buckwheat.</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$13.75</span>
+                            <a href="catering.html" class="menu-card-order">Order Now <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card fade-up" data-category="savory-crepe">
+                    <div class="menu-card-img"><img src="assets/images/hero-main.jpg" alt="Mediterranean crepe" loading="lazy"></div>
+                    <div class="menu-card-body">
+                        <span class="menu-card-cat">Savory Crêpe</span>
+                        <h3 class="menu-card-title">Mediterranean Garden</h3>
+                        <p class="menu-card-desc">Roasted vegetables, feta cheese, sun-dried tomatoes, basil pesto, and arugula.</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$12.25</span>
+                            <a href="catering.html" class="menu-card-order">Order Now <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card fade-up" data-category="savory-crepe">
+                    <div class="menu-card-img"><img src="assets/images/cafe-interior.jpg" alt="Smoked salmon crepe" loading="lazy"></div>
+                    <div class="menu-card-body">
+                        <span class="menu-card-cat">Savory Crêpe</span>
+                        <h3 class="menu-card-title">Smoked Salmon Royale</h3>
+                        <p class="menu-card-desc">Scottish smoked salmon, cream cheese, capers, dill, and a squeeze of lemon.</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$15.50</span>
+                            <a href="catering.html" class="menu-card-order">Order Now <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sweet Waffles -->
+                <div class="menu-card fade-up" data-category="sweet-waffle">
+                    <div class="menu-card-img"><img src="assets/images/belgian-waffle-berry.jpg" alt="Berry garden waffle" loading="lazy"></div>
+                    <div class="menu-card-body">
+                        <span class="menu-card-cat">Sweet Waffle</span>
+                        <h3 class="menu-card-title">Berry Garden Waffle</h3>
+                        <p class="menu-card-desc">Crispy Belgian waffle with fresh berries, vanilla cream, and maple drizzle.</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$14.00</span>
+                            <a href="catering.html" class="menu-card-order">Order Now <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card fade-up" data-category="sweet-waffle">
+                    <div class="menu-card-img"><img src="assets/images/waffle-caramel.jpg" alt="Caramel pecan waffle" loading="lazy"></div>
+                    <div class="menu-card-body">
+                        <span class="menu-card-cat">Sweet Waffle</span>
+                        <h3 class="menu-card-title">Salted Caramel Pecan</h3>
+                        <p class="menu-card-desc">Crispy waffle, vanilla bean ice cream, salted caramel, and toasted pecans.</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$15.00</span>
+                            <a href="catering.html" class="menu-card-order">Order Now <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card fade-up" data-category="sweet-waffle">
+                    <div class="menu-card-img"><img src="assets/images/hero2-premium.jpg" alt="Chocolate dream waffle" loading="lazy"></div>
+                    <div class="menu-card-body">
+                        <span class="menu-card-cat">Sweet Waffle</span>
+                        <h3 class="menu-card-title">Chocolate Dream</h3>
+                        <p class="menu-card-desc">Dark chocolate ganache, fresh raspberries, whipped cream, and cocoa nibs.</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$13.75</span>
+                            <a href="catering.html" class="menu-card-order">Order Now <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Savory Waffles -->
+                <div class="menu-card fade-up" data-category="savory-waffle">
+                    <div class="menu-card-img"><img src="assets/images/savory-waffle-chicken.jpg" alt="Chicken and waffle" loading="lazy"></div>
+                    <div class="menu-card-body">
+                        <span class="menu-card-cat">Savory Waffle</span>
+                        <h3 class="menu-card-title">Southern Comfort</h3>
+                        <p class="menu-card-desc">Herb waffle, buttermilk fried chicken, honey drizzle, and hot sauce.</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$16.00</span>
+                            <a href="catering.html" class="menu-card-order">Order Now <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card fade-up" data-category="savory-waffle">
+                    <div class="menu-card-img"><img src="assets/images/chef-making-crepe.jpg" alt="Avocado egg waffle" loading="lazy"></div>
+                    <div class="menu-card-body">
+                        <span class="menu-card-cat">Savory Waffle</span>
+                        <h3 class="menu-card-title">Avocado Sunrise</h3>
+                        <p class="menu-card-desc">Herb waffle, smashed avocado, poached egg, cherry tomatoes, and microgreens.</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$14.50</span>
+                            <a href="catering.html" class="menu-card-order">Order Now <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card fade-up" data-category="savory-waffle">
+                    <div class="menu-card-img"><img src="assets/images/catering-spread.jpg" alt="BBQ pulled pork waffle" loading="lazy"></div>
+                    <div class="menu-card-body">
+                        <span class="menu-card-cat">Savory Waffle</span>
+                        <h3 class="menu-card-title">BBQ Pulled Pork</h3>
+                        <p class="menu-card-desc">Slow-smoked pulled pork, tangy BBQ sauce, pickled jalapeños, and coleslaw.</p>
+                        <div class="menu-card-footer">
+                            <span class="menu-card-price">$16.50</span>
+                            <a href="catering.html" class="menu-card-order">Order Now <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+</body>
+</html>
