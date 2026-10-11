@@ -419,6 +419,295 @@ function initFaqAccordion() {
     });
 }
 
+/* ─── HERO THEMATIC BACKGROUND ANIMATION & AMBIENT EFFECTS ─ */
+function initHeroThemeEffects() {
+    const heroSections = document.querySelectorAll('.hero2-section, .hero-section');
+    if (!heroSections.length) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    heroSections.forEach((hero, index) => {
+        // Ensure background container exists
+        let themeBg = hero.querySelector('.hero-theme-bg');
+        if (!themeBg) {
+            themeBg = document.createElement('div');
+            themeBg.className = 'hero-theme-bg';
+            themeBg.setAttribute('aria-hidden', 'true');
+            themeBg.innerHTML = `
+                <div class="hero-ambient-glow orb-berry"></div>
+                <div class="hero-ambient-glow orb-honey"></div>
+                <div class="hero-ambient-glow orb-espresso"></div>
+                <div class="hero-waffle-lattice"></div>
+                <div class="hero-steam-container">
+                    <span class="steam-wisp steam-1"></span>
+                    <span class="steam-wisp steam-2"></span>
+                    <span class="steam-wisp steam-3"></span>
+                    <span class="steam-wisp steam-4"></span>
+                </div>
+                <canvas class="hero-particle-canvas"></canvas>
+                <div class="hero-mouse-spotlight"></div>
+            `;
+            hero.insertBefore(themeBg, hero.firstChild);
+        }
+
+        const canvas = themeBg.querySelector('.hero-particle-canvas');
+        const spotlight = themeBg.querySelector('.hero-mouse-spotlight');
+        if (!canvas) return;
+
+        if (prefersReducedMotion) {
+            canvas.style.display = 'none';
+            return;
+        }
+
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+
+        let width = 0;
+        let height = 0;
+        let dpr = 1;
+        let particles = [];
+        let animationFrameId = null;
+        let isVisible = true;
+
+        // Mouse interaction state
+        let targetMouseX = -1000;
+        let targetMouseY = -1000;
+        let currentMouseX = -1000;
+        let currentMouseY = -1000;
+        let isMouseActive = false;
+
+        function resize() {
+            const rect = hero.getBoundingClientRect();
+            width = Math.max(rect.width, 320);
+            height = Math.max(rect.height, 400);
+            dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+            canvas.width = Math.floor(width * dpr);
+            canvas.height = Math.floor(height * dpr);
+            canvas.style.width = width + 'px';
+            canvas.style.height = height + 'px';
+
+            createParticles();
+        }
+
+        function createParticles() {
+            particles = [];
+            const count = width < 768 ? 26 : 48;
+
+            for (let i = 0; i < count; i++) {
+                // Determine particle confectionery type
+                const rand = Math.random();
+                let type = 'sugar'; // Liege pearl sugar sparkle
+                let color = '#FFF5F5';
+                let size = 1.2 + Math.random() * 1.8;
+
+                if (rand < 0.40) {
+                    type = 'sugar';
+                    color = Math.random() > 0.5 ? '#FFFFFF' : '#FFF1F2';
+                    size = 1.2 + Math.random() * 1.6;
+                } else if (rand < 0.70) {
+                    type = 'honey'; // Caramelized honey & amber glaze drop
+                    color = Math.random() > 0.5 ? '#FBBF24' : '#F59E0B';
+                    size = 1.8 + Math.random() * 2.2;
+                } else if (rand < 0.90) {
+                    type = 'berry'; // Parisian ruby berry sparkle
+                    color = Math.random() > 0.5 ? '#FB7185' : '#E11D48';
+                    size = 1.6 + Math.random() * 1.8;
+                } else {
+                    type = 'star'; // 4-pointed artisan sparkle star
+                    color = '#FDE68A';
+                    size = 3.5 + Math.random() * 3.5;
+                }
+
+                const baseVy = -(0.18 + Math.random() * 0.45);
+
+                particles.push({
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    vx: 0,
+                    vy: baseVy,
+                    baseVy: baseVy,
+                    size: size,
+                    type: type,
+                    color: color,
+                    baseAlpha: 0.25 + Math.random() * 0.65,
+                    alpha: 0.25 + Math.random() * 0.65,
+                    twinkleSpeed: 0.02 + Math.random() * 0.05,
+                    twinklePhase: Math.random() * Math.PI * 2,
+                    wobbleSpeed: 0.015 + Math.random() * 0.025,
+                    wobbleAmp: 0.35 + Math.random() * 0.65,
+                    wobblePhase: Math.random() * Math.PI * 2,
+                    rotation: Math.random() * Math.PI * 2,
+                    rotSpeed: (Math.random() - 0.5) * 0.03
+                });
+            }
+        }
+
+        // Draw 4-point sparkle star
+        function drawSparkleStar(ctx, x, y, r, rot, alpha, color) {
+            ctx.save();
+            ctx.translate(x, y);
+            ctx.rotate(rot);
+            ctx.fillStyle = color;
+            ctx.globalAlpha = alpha;
+            ctx.beginPath();
+            for (let i = 0; i < 4; i++) {
+                const angle = (i * Math.PI) / 2;
+                ctx.lineTo(Math.cos(angle) * r, Math.sin(angle) * r);
+                const halfAngle = angle + Math.PI / 4;
+                ctx.lineTo(Math.cos(halfAngle) * (r * 0.26), Math.sin(halfAngle) * (r * 0.26));
+            }
+            ctx.closePath();
+            ctx.fill();
+            ctx.restore();
+        }
+
+        function render(time) {
+            if (!isVisible) return;
+
+            ctx.save();
+            ctx.scale(dpr, dpr);
+            ctx.clearRect(0, 0, width, height);
+
+            const isDark = document.documentElement.classList.contains('dark');
+            const t = time * 0.001;
+
+            // Smooth mouse spotlight motion
+            if (spotlight && isMouseActive) {
+                currentMouseX += (targetMouseX - currentMouseX) * 0.12;
+                currentMouseY += (targetMouseY - currentMouseY) * 0.12;
+                spotlight.style.left = currentMouseX + 'px';
+                spotlight.style.top = currentMouseY + 'px';
+                spotlight.style.opacity = '1';
+            } else if (spotlight) {
+                spotlight.style.opacity = '0';
+            }
+
+            // Update & render particles
+            for (let i = 0; i < particles.length; i++) {
+                const p = particles[i];
+
+                // Natural upward float + horizontal gentle sway
+                p.wobblePhase += p.wobbleSpeed;
+                const sway = Math.sin(p.wobblePhase) * p.wobbleAmp;
+
+                // Mouse deflection physics
+                if (isMouseActive) {
+                    const dx = p.x - currentMouseX;
+                    const dy = p.y - currentMouseY;
+                    const dist = Math.hypot(dx, dy);
+                    const repelRadius = 110;
+
+                    if (dist < repelRadius && dist > 0) {
+                        const force = (1 - dist / repelRadius) * 1.2;
+                        p.vx += (dx / dist) * force;
+                        p.vy += (dy / dist) * force * 0.6;
+                    }
+                }
+
+                // Damping
+                p.vx *= 0.92;
+                p.vy = p.vy * 0.94 + p.baseVy * 0.06;
+
+                p.x += p.vx + sway;
+                p.y += p.vy;
+                p.rotation += p.rotSpeed;
+
+                // Boundary check
+                if (p.y < -20) {
+                    p.y = height + 15;
+                    p.x = Math.random() * width;
+                    p.vx = 0;
+                    p.vy = p.baseVy;
+                }
+                if (p.x < -20) p.x = width + 15;
+                if (p.x > width + 20) p.x = -15;
+
+                // Twinkle animation
+                p.twinklePhase += p.twinkleSpeed;
+                const twinkle = (Math.sin(p.twinklePhase) + 1) * 0.5; // 0 to 1
+                const currentAlpha = Math.max(0.12, Math.min(1, p.baseAlpha * (0.45 + twinkle * 0.55)));
+
+                if (p.type === 'star') {
+                    drawSparkleStar(ctx, p.x, p.y, p.size, p.rotation, currentAlpha, p.color);
+                } else {
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                    ctx.fillStyle = p.color;
+                    ctx.globalAlpha = currentAlpha;
+
+                    if (isDark) {
+                        ctx.shadowBlur = p.type === 'honey' ? 8 : (p.type === 'berry' ? 9 : 5);
+                        ctx.shadowColor = p.color;
+                    } else {
+                        ctx.shadowBlur = 3;
+                        ctx.shadowColor = 'rgba(245, 158, 11, 0.3)';
+                    }
+
+                    ctx.fill();
+                    ctx.restore();
+                }
+            }
+
+            ctx.restore();
+            animationFrameId = requestAnimationFrame(render);
+        }
+
+        // Pointer event listeners
+        hero.addEventListener('mousemove', (e) => {
+            const rect = hero.getBoundingClientRect();
+            targetMouseX = e.clientX - rect.left;
+            targetMouseY = e.clientY - rect.top;
+            if (!isMouseActive) {
+                currentMouseX = targetMouseX;
+                currentMouseY = targetMouseY;
+            }
+            isMouseActive = true;
+        }, { passive: true });
+
+        hero.addEventListener('mouseleave', () => {
+            isMouseActive = false;
+        });
+
+        // IntersectionObserver to pause loop when out of viewport
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        if (!isVisible) {
+                            isVisible = true;
+                            animationFrameId = requestAnimationFrame(render);
+                        }
+                    } else {
+                        isVisible = false;
+                        if (animationFrameId) {
+                            cancelAnimationFrame(animationFrameId);
+                            animationFrameId = null;
+                        }
+                    }
+                });
+            }, { threshold: 0.05 });
+
+            observer.observe(hero);
+        }
+
+        // Initial setup and resize handler
+        resize();
+        window.addEventListener('resize', debounce(resize, 150));
+        animationFrameId = requestAnimationFrame(render);
+    });
+}
+
+// Utility debounce helper
+function debounce(func, wait) {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
+
 /* ─── INIT ALL ────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
     buildNavbar();
@@ -429,4 +718,5 @@ document.addEventListener('DOMContentLoaded', () => {
     initMenuTabs();
     initCountdown();
     initFaqAccordion();
+    initHeroThemeEffects();
 });

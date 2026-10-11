@@ -14,6 +14,22 @@
 
     <!-- ====== HERO 2 — 3-SLIDE SPLIT CAROUSEL ====== -->
     <section class="hero2-section" id="hero2-section">
+        <!-- Hero Thematic Background Animation & Ambient Atmosphere -->
+        <div class="hero-theme-bg" aria-hidden="true">
+            <div class="hero-ambient-glow orb-berry"></div>
+            <div class="hero-ambient-glow orb-honey"></div>
+            <div class="hero-ambient-glow orb-espresso"></div>
+            <div class="hero-waffle-lattice"></div>
+            <div class="hero-steam-container" id="hero-steam-container">
+                <span class="steam-wisp steam-1"></span>
+                <span class="steam-wisp steam-2"></span>
+                <span class="steam-wisp steam-3"></span>
+                <span class="steam-wisp steam-4"></span>
+            </div>
+            <canvas class="hero-particle-canvas" id="hero-particle-canvas"></canvas>
+            <div class="hero-mouse-spotlight" id="hero-mouse-spotlight"></div>
+        </div>
+
         <div class="hero2-slider" id="hero2-slider">
             <!-- Slide 1: Premium Indulgence -->
             <div class="hero2-slide active" data-index="0">
@@ -212,48 +228,145 @@
     </section>
 
 
-    <!-- ====== REVIEWS MASONRY ====== -->
-    <section class="reviews-section" id="reviews-section">
+    <!-- ====== CUSTOMER TESTIMONIALS SLIDER ====== -->
+    <section class="testimonials2-section" id="testimonials2-section">
         <div class="container text-center">
-            <span class="section-label fade-up">Guest Stories</span>
-            <h2 class="section-title fade-up">Rave Reviews from Our Guests</h2>
-            <p class="section-desc fade-up">Discover why thousands of guests choose us as their favorite brunch destination.</p>
-            <div class="reviews-masonry">
-                <div class="review-card fade-up">
-                    <div class="review-rating">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span class="section-label fade-up">Guest Reviews</span>
+            <h2 class="section-title fade-up">What Our Guests Say</h2>
+            <p class="section-desc fade-up">Real reviews from our valued customers who keep coming back for more.</p>
+
+            <div class="testimonial2-slider-wrapper fade-up">
+                <!-- Ambient Backdrop Glow -->
+                <div class="testimonial2-glow" aria-hidden="true"></div>
+
+                <div class="testimonial2-slider" id="testimonial2-slider">
+                    <!-- Slide 1 -->
+                    <div class="testimonial2-slide active" data-index="0">
+                        <div class="testimonial2-card">
+                            <div class="testimonial2-card-top">
+                                <div class="testimonial2-stars" aria-label="5 out of 5 stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                </div>
+                                <span class="testimonial2-verified-pill">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                    <span>Verified Guest</span>
+                                </span>
+                            </div>
+
+                            <div class="testimonial2-quote-mark" aria-hidden="true">&rdquo;</div>
+
+                            <blockquote class="testimonial2-text">
+                                &ldquo;The Nutella crepe is absolutely divine! The batter is perfectly thin and delicate. My family comes here every weekend.&rdquo;
+                            </blockquote>
+
+                            <div class="testimonial2-author-wrap">
+                                <div class="testimonial2-avatar">
+                                    <span>SL</span>
+                                </div>
+                                <div class="testimonial2-author-meta">
+                                    <h4 class="testimonial2-author-name">Sophie Laurent</h4>
+                                    <p class="testimonial2-author-role">Regular Guest &bull; Weekend Brunch</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p class="review-text">"This place is a hidden gem! The Nutella banana crepe is to die for. We bring our kids every Saturday morning and they absolutely love it."</p>
-                    <p class="review-author">Isabelle Moreau</p>
-                    <p class="review-date">2 weeks ago</p>
+
+                    <!-- Slide 2 -->
+                    <div class="testimonial2-slide" data-index="1">
+                        <div class="testimonial2-card">
+                            <div class="testimonial2-card-top">
+                                <div class="testimonial2-stars" aria-label="5 out of 5 stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                </div>
+                                <span class="testimonial2-verified-pill">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                    <span>Verified Guest</span>
+                                </span>
+                            </div>
+
+                            <div class="testimonial2-quote-mark" aria-hidden="true">&rdquo;</div>
+
+                            <blockquote class="testimonial2-text">
+                                &ldquo;Best waffles I've ever had &mdash; crispy on the outside, fluffy inside. The caramel pecan waffle is a masterpiece.&rdquo;
+                            </blockquote>
+
+                            <div class="testimonial2-author-wrap">
+                                <div class="testimonial2-avatar">
+                                    <span>MC</span>
+                                </div>
+                                <div class="testimonial2-author-meta">
+                                    <h4 class="testimonial2-author-name">Marcus Chen</h4>
+                                    <p class="testimonial2-author-role">Food Blogger &bull; Waffle Enthusiast</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="testimonial2-slide" data-index="2">
+                        <div class="testimonial2-card">
+                            <div class="testimonial2-card-top">
+                                <div class="testimonial2-stars" aria-label="5 out of 5 stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                </div>
+                                <span class="testimonial2-verified-pill">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                    <span>Verified Guest</span>
+                                </span>
+                            </div>
+
+                            <div class="testimonial2-quote-mark" aria-hidden="true">&rdquo;</div>
+
+                            <blockquote class="testimonial2-text">
+                                &ldquo;They catered our wedding brunch and it was spectacular! Guests still talk about the crepe station. Highly recommend!&rdquo;
+                            </blockquote>
+
+                            <div class="testimonial2-author-wrap">
+                                <div class="testimonial2-avatar">
+                                    <span>ED</span>
+                                </div>
+                                <div class="testimonial2-author-meta">
+                                    <h4 class="testimonial2-author-name">Elena &amp; David R.</h4>
+                                    <p class="testimonial2-author-role">Wedding Clients &bull; Catering Brunch</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="review-card fade-up">
-                    <div class="review-rating">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+
+                <!-- Slider Controls: Prev/Next Buttons & 5s Progress Dots -->
+                <div class="testimonial2-controls">
+                    <button class="testimonial2-nav-btn" id="testimonial2-prev" aria-label="Previous testimonial">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                    </button>
+
+                    <div class="testimonial2-dots" id="testimonial2-dots">
+                        <button class="testimonial2-dot active" data-index="0" aria-label="Review 1">
+                            <span class="testimonial2-dot-progress"></span>
+                        </button>
+                        <button class="testimonial2-dot" data-index="1" aria-label="Review 2">
+                            <span class="testimonial2-dot-progress"></span>
+                        </button>
+                        <button class="testimonial2-dot" data-index="2" aria-label="Review 3">
+                            <span class="testimonial2-dot-progress"></span>
+                        </button>
                     </div>
-                    <p class="review-text">"Had their catering for our office retreat — the savory crepe station was a massive hit! Professional, punctual, and delicious."</p>
-                    <p class="review-author">James Patterson</p>
-                    <p class="review-date">1 month ago</p>
-                </div>
-                <div class="review-card fade-up">
-                    <div class="review-rating">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    </div>
-                    <p class="review-text">"Amazing ambiance — feels like a little corner of Paris. The savory galettes are authentic and the coffee is excellent too."</p>
-                    <p class="review-author">Léa & Pierre Dubois</p>
-                    <p class="review-date">1 week ago</p>
+
+                    <button class="testimonial2-nav-btn" id="testimonial2-next" aria-label="Next testimonial">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -404,6 +517,108 @@
             }, { passive: true });
 
             // Start auto-rotation
+            resetTimer();
+        })();
+
+        /* ====== TESTIMONIALS 2 SLIDER SCRIPT (5-second auto-switch) ====== */
+        (function initTestimonials2Slider() {
+            const slider = document.getElementById('testimonial2-slider');
+            if (!slider) return;
+
+            const slides = Array.from(slider.querySelectorAll('.testimonial2-slide'));
+            const dots = Array.from(document.querySelectorAll('#testimonial2-dots .testimonial2-dot'));
+            const prevBtn = document.getElementById('testimonial2-prev');
+            const nextBtn = document.getElementById('testimonial2-next');
+            const wrapper = document.querySelector('.testimonial2-slider-wrapper');
+
+            if (!slides.length) return;
+
+            let currentIndex = 0;
+            let timer = null;
+            const SLIDE_DURATION = 5000; // 5 seconds per slide
+
+            function goToSlide(index) {
+                if (index < 0) index = slides.length - 1;
+                if (index >= slides.length) index = 0;
+
+                currentIndex = index;
+
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === currentIndex);
+                });
+
+                dots.forEach((dot, i) => {
+                    const isActive = i === currentIndex;
+                    dot.classList.toggle('active', isActive);
+
+                    // Re-trigger progress bar animation on the active dot
+                    const progress = dot.querySelector('.testimonial2-dot-progress');
+                    if (progress) {
+                        progress.style.animation = 'none';
+                        if (isActive) {
+                            void progress.offsetWidth; // trigger reflow
+                            progress.style.animation = '';
+                        }
+                    }
+                });
+
+                resetTimer();
+            }
+
+            function nextSlide() {
+                goToSlide(currentIndex + 1);
+            }
+
+            function prevSlide() {
+                goToSlide(currentIndex - 1);
+            }
+
+            function resetTimer() {
+                if (timer) clearInterval(timer);
+                timer = setInterval(nextSlide, SLIDE_DURATION);
+            }
+
+            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+            dots.forEach((dot) => {
+                dot.addEventListener('click', () => {
+                    const idx = parseInt(dot.getAttribute('data-index'), 10);
+                    if (!isNaN(idx)) goToSlide(idx);
+                });
+            });
+
+            // Pause on hover, resume on mouse leave
+            if (wrapper) {
+                wrapper.addEventListener('mouseenter', () => {
+                    if (timer) clearInterval(timer);
+                });
+                wrapper.addEventListener('mouseleave', () => {
+                    resetTimer();
+                });
+            }
+
+            // Mobile touch swipe support
+            let touchStartX = 0;
+            let touchEndX = 0;
+            slider.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            slider.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                const diff = touchEndX - touchStartX;
+                if (Math.abs(diff) > 40) {
+                    const isRtl = document.documentElement.getAttribute('dir') === 'rtl';
+                    if (diff > 0) {
+                        isRtl ? nextSlide() : prevSlide();
+                    } else {
+                        isRtl ? prevSlide() : nextSlide();
+                    }
+                }
+            }, { passive: true });
+
+            // Start 5s auto-rotation
             resetTimer();
         })();
     </script>

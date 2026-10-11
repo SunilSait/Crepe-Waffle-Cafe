@@ -13,48 +13,133 @@
     <!-- Navbar -->
     <div id="navbar-placeholder"></div>
 
-    <!-- ====== HERO SECTION ====== -->
-    <section class="hero-section" id="hero-section">
+    <!-- ====== HERO SECTION (DUAL-CRAFT SENSORY ATELIER) ====== -->
+    <section class="hero-section hero-atelier-section" id="hero-section">
         <div class="hero-bg">
-            <img src="assets/images/hero-main.jpg" alt="Delicious crepes and waffles spread on a rustic table" loading="eager">
+            <img src="assets/images/hero-main.jpg" alt="Artisan crepe and waffle cafe atmosphere" loading="eager">
+        </div>
+        <!-- Hero Thematic Background Animation & Ambient Atmosphere -->
+        <div class="hero-theme-bg" aria-hidden="true">
+            <div class="hero-ambient-glow orb-berry"></div>
+            <div class="hero-ambient-glow orb-honey"></div>
+            <div class="hero-ambient-glow orb-espresso"></div>
+            <div class="hero-waffle-lattice"></div>
+            <canvas class="hero-particle-canvas" id="hero-particle-canvas-home1"></canvas>
+            <div class="hero-mouse-spotlight"></div>
         </div>
         <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-badge fade-up">
-                <span class="hero-badge-dot"></span>
-                <span>Artisan French Café • Est. 2018</span>
+
+        <div class="hero-atelier-container container">
+            <div class="hero-atelier-grid">
+                <!-- Left Column: Editorial Brand Narrative -->
+                <div class="hero-narrative-col">
+                    <div class="hero-atelier-pill fade-up">
+                        <span class="live-bake-beacon"></span>
+                        <span class="atelier-text">Parisian Atelier &amp; Belgian Craft</span>
+                        <span class="atelier-tag">Est. 2018</span>
+                    </div>
+
+                    <h1 class="hero-atelier-title fade-up">
+                        Where Silky <span class="title-highlight-crepe">Crepes</span><br>
+                        Meet Golden <span class="title-highlight-waffle">Waffles</span>
+                    </h1>
+
+                    <p class="hero-atelier-desc fade-up">
+                        Experience the sensory theater of handcrafted French crepes and authentic Belgian waffles — made fresh to order on cast-iron griddles with organic flour, Liege pearl sugar, and pure Madagascar vanilla bean.
+                    </p>
+
+                    <div class="hero-ctas fade-up">
+                        <a href="menu.html" class="btn btn-primary btn-lg hero-cta-main">
+                            <span>Explore 50+ Flavors</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                        <a href="locations.html" class="btn btn-secondary btn-lg hero-cta-sec">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span>Find an Atelier</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-trust-bar fade-up">
+                        <div class="trust-stars">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <span class="trust-rating">4.9 / 5.0</span>
+                        <span class="trust-divider">•</span>
+                        <span class="trust-text">12,000+ Happy Guests Across 6 Boutiques</span>
+                    </div>
+                </div>
+
+                <!-- Right Column: Dual Masterpiece Layered Showcase -->
+                <div class="hero-showcase-col">
+                    <div class="hero-showcase-stage fade-up">
+                        <!-- Card 1: The French Crepe (Top Left) -->
+                        <div class="hero-dish-card card-crepe">
+                            <div class="dish-card-media">
+                                <img src="assets/images/crepe-strawberry.jpg" alt="Strawberry French Crepe with Chantilly Cream" loading="eager">
+                                <div class="dish-card-glow"></div>
+                            </div>
+                            <div class="dish-card-meta">
+                                <div class="dish-meta-top">
+                                    <span class="dish-badge-tag berry-tag">Parisian Crepe</span>
+                                    <span class="dish-badge-pill">Silky &amp; Light</span>
+                                </div>
+                                <h3 class="dish-title">Strawberry Cloud Roll</h3>
+                                <p class="dish-caption">Delicate lace fold • Vanilla cream • Organic coulis</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: The Belgian Waffle (Overlapping Bottom Right) -->
+                        <div class="hero-dish-card card-waffle">
+                            <div class="dish-card-media">
+                                <img src="assets/images/belgian-waffle-berry.jpg" alt="Artisan Belgian Liege Waffle with Berries and Cream" loading="eager">
+                                <div class="dish-card-glow"></div>
+                            </div>
+                            <div class="dish-card-meta">
+                                <div class="dish-meta-top">
+                                    <span class="dish-badge-tag gold-tag">Belgian Waffle</span>
+                                    <span class="dish-badge-pill">Crisp &amp; Caramelized</span>
+                                </div>
+                                <h3 class="dish-title">Royal Berry Crown</h3>
+                                <p class="dish-caption">Cast-iron caramelized • Liege pearl sugar crunch</p>
+                            </div>
+                        </div>
+
+                        <!-- Center Floating Seal: Artisan Craft -->
+                        <div class="hero-craft-seal">
+                            <div class="seal-inner">
+                                <span class="seal-icon">♨</span>
+                                <span class="seal-text">BAKED FRESH</span>
+                                <span class="seal-sub">TO ORDER</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h1 class="hero-title fade-up">
-                Golden Crepes,<br>Crispy <span class="hero-title-accent">Waffles</span>
-            </h1>
-            <p class="hero-desc fade-up">
-                Experience the art of handcrafted French crepes and authentic Belgian waffles, made fresh to order with the finest organic ingredients and served with love.
-            </p>
-            <div class="hero-ctas fade-up">
-                <a href="menu.html" class="btn btn-primary btn-lg">
-                    <span>Explore Our Menu</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                </a>
-                <a href="locations.html" class="btn btn-secondary btn-lg">
-                    <span>Find a Location</span>
-                </a>
-            </div>
-            <div class="hero-stats fade-up">
-                <div class="hero-stat">
-                    <span class="hero-stat-num">50+</span>
-                    <span class="hero-stat-label">Menu Items</span>
+
+            <!-- Bottom Docked Metric Ribbon -->
+            <div class="hero-bottom-ribbon fade-up">
+                <div class="ribbon-item">
+                    <span class="ribbon-val">50+</span>
+                    <span class="ribbon-lbl">Artisan Specialties</span>
                 </div>
-                <div class="hero-stat">
-                    <span class="hero-stat-num">4.9</span>
-                    <span class="hero-stat-label">Star Rating</span>
+                <div class="ribbon-sep"></div>
+                <div class="ribbon-item">
+                    <span class="ribbon-val">100%</span>
+                    <span class="ribbon-lbl">French Flour &amp; Liege Sugar</span>
                 </div>
-                <div class="hero-stat">
-                    <span class="hero-stat-num">12K+</span>
-                    <span class="hero-stat-label">Happy Guests</span>
+                <div class="ribbon-sep"></div>
+                <div class="ribbon-item">
+                    <span class="ribbon-val">4.9 ★</span>
+                    <span class="ribbon-lbl">12,000+ Happy Guests</span>
                 </div>
-                <div class="hero-stat">
-                    <span class="hero-stat-num">6</span>
-                    <span class="hero-stat-label">Locations</span>
+                <div class="ribbon-sep"></div>
+                <div class="ribbon-item">
+                    <span class="ribbon-val">6</span>
+                    <span class="ribbon-lbl">Boutique Locations</span>
                 </div>
             </div>
         </div>
@@ -211,48 +296,145 @@
         </div>
     </section>
 
-    <!-- ====== TESTIMONIALS ====== -->
-    <section class="testimonials-section" id="testimonials-section">
+    <!-- ====== TESTIMONIALS SLIDER ====== -->
+    <section class="testimonials2-section" id="testimonials-section">
         <div class="container text-center">
             <span class="section-label fade-up">Guest Reviews</span>
             <h2 class="section-title fade-up">What Our Guests Say</h2>
             <p class="section-desc fade-up">Real reviews from our valued customers who keep coming back for more.</p>
-            <div class="testimonials-grid">
-                <div class="testimonial-card fade-up">
-                    <div class="testimonial-stars">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+
+            <div class="testimonial2-slider-wrapper fade-up">
+                <!-- Ambient Backdrop Glow -->
+                <div class="testimonial2-glow" aria-hidden="true"></div>
+
+                <div class="testimonial2-slider" id="testimonial-slider">
+                    <!-- Slide 1 -->
+                    <div class="testimonial2-slide active" data-index="0">
+                        <div class="testimonial2-card">
+                            <div class="testimonial2-card-top">
+                                <div class="testimonial2-stars" aria-label="5 out of 5 stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                </div>
+                                <span class="testimonial2-verified-pill">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                    <span>Verified Guest</span>
+                                </span>
+                            </div>
+
+                            <div class="testimonial2-quote-mark" aria-hidden="true">&rdquo;</div>
+
+                            <blockquote class="testimonial2-text">
+                                &ldquo;The Nutella crepe is absolutely divine! The batter is perfectly thin and delicate. My family comes here every weekend.&rdquo;
+                            </blockquote>
+
+                            <div class="testimonial2-author-wrap">
+                                <div class="testimonial2-avatar">
+                                    <span>SL</span>
+                                </div>
+                                <div class="testimonial2-author-meta">
+                                    <h4 class="testimonial2-author-name">Sophie Laurent</h4>
+                                    <p class="testimonial2-author-role">Regular Guest &bull; Weekend Brunch</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <p class="testimonial-text">"The Nutella crepe is absolutely divine! The batter is perfectly thin and delicate. My family comes here every weekend."</p>
-                    <p class="testimonial-author">Sophie Laurent</p>
-                    <p class="testimonial-role">Regular Guest</p>
+
+                    <!-- Slide 2 -->
+                    <div class="testimonial2-slide" data-index="1">
+                        <div class="testimonial2-card">
+                            <div class="testimonial2-card-top">
+                                <div class="testimonial2-stars" aria-label="5 out of 5 stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                </div>
+                                <span class="testimonial2-verified-pill">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                    <span>Verified Guest</span>
+                                </span>
+                            </div>
+
+                            <div class="testimonial2-quote-mark" aria-hidden="true">&rdquo;</div>
+
+                            <blockquote class="testimonial2-text">
+                                &ldquo;Best waffles I've ever had &mdash; crispy on the outside, fluffy inside. The caramel pecan waffle is a masterpiece.&rdquo;
+                            </blockquote>
+
+                            <div class="testimonial2-author-wrap">
+                                <div class="testimonial2-avatar">
+                                    <span>MC</span>
+                                </div>
+                                <div class="testimonial2-author-meta">
+                                    <h4 class="testimonial2-author-name">Marcus Chen</h4>
+                                    <p class="testimonial2-author-role">Food Blogger &bull; Waffle Enthusiast</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="testimonial2-slide" data-index="2">
+                        <div class="testimonial2-card">
+                            <div class="testimonial2-card-top">
+                                <div class="testimonial2-stars" aria-label="5 out of 5 stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                </div>
+                                <span class="testimonial2-verified-pill">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                    <span>Verified Guest</span>
+                                </span>
+                            </div>
+
+                            <div class="testimonial2-quote-mark" aria-hidden="true">&rdquo;</div>
+
+                            <blockquote class="testimonial2-text">
+                                &ldquo;They catered our wedding brunch and it was spectacular! Guests still talk about the crepe station. Highly recommend!&rdquo;
+                            </blockquote>
+
+                            <div class="testimonial2-author-wrap">
+                                <div class="testimonial2-avatar">
+                                    <span>ED</span>
+                                </div>
+                                <div class="testimonial2-author-meta">
+                                    <h4 class="testimonial2-author-name">Elena &amp; David R.</h4>
+                                    <p class="testimonial2-author-role">Wedding Clients &bull; Catering Brunch</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="testimonial-card fade-up">
-                    <div class="testimonial-stars">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+
+                <!-- Slider Controls: Prev/Next Buttons & 5s Progress Dots -->
+                <div class="testimonial2-controls">
+                    <button class="testimonial2-nav-btn" id="testimonial-prev" aria-label="Previous testimonial">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                    </button>
+
+                    <div class="testimonial2-dots" id="testimonial-dots">
+                        <button class="testimonial2-dot active" data-index="0" aria-label="Review 1">
+                            <span class="testimonial2-dot-progress"></span>
+                        </button>
+                        <button class="testimonial2-dot" data-index="1" aria-label="Review 2">
+                            <span class="testimonial2-dot-progress"></span>
+                        </button>
+                        <button class="testimonial2-dot" data-index="2" aria-label="Review 3">
+                            <span class="testimonial2-dot-progress"></span>
+                        </button>
                     </div>
-                    <p class="testimonial-text">"Best waffles I've ever had — crispy on the outside, fluffy inside. The caramel pecan waffle is a masterpiece."</p>
-                    <p class="testimonial-author">Marcus Chen</p>
-                    <p class="testimonial-role">Food Blogger</p>
-                </div>
-                <div class="testimonial-card fade-up">
-                    <div class="testimonial-stars">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    </div>
-                    <p class="testimonial-text">"They catered our wedding brunch and it was spectacular! Guests still talk about the crepe station. Highly recommend!"</p>
-                    <p class="testimonial-author">Elena & David R.</p>
-                    <p class="testimonial-role">Wedding Client</p>
+
+                    <button class="testimonial2-nav-btn" id="testimonial-next" aria-label="Next testimonial">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -311,25 +493,116 @@
                         <span>Order Catering</span>
                     </a>
                 </div>
-                <div class="cta-info-bar">
-                    <div class="cta-info-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                        <span>Open Daily: 8:00 AM – 10:00 PM</span>
-                    </div>
-                    <div class="cta-info-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        <span>Downtown & Westside Cafés</span>
-                    </div>
-                    <div class="cta-info-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                        <span>Dine-In, Takeaway & Catering</span>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <div id="footer-placeholder"></div>
+
+    <!-- ====== TESTIMONIALS SLIDER SCRIPT (5-second auto-switch) ====== -->
+    <script>
+        (function initTestimonialsSlider() {
+            const slider = document.getElementById('testimonial-slider');
+            if (!slider) return;
+
+            const slides = Array.from(slider.querySelectorAll('.testimonial2-slide'));
+            const dots = Array.from(document.querySelectorAll('#testimonial-dots .testimonial2-dot'));
+            const prevBtn = document.getElementById('testimonial-prev');
+            const nextBtn = document.getElementById('testimonial-next');
+            const wrapper = slider.closest('.testimonial2-slider-wrapper');
+
+            if (!slides.length) return;
+
+            let currentIndex = 0;
+            let timer = null;
+            const SLIDE_DURATION = 5000; // 5 seconds per slide
+
+            function goToSlide(index) {
+                if (index < 0) index = slides.length - 1;
+                if (index >= slides.length) index = 0;
+
+                currentIndex = index;
+
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === currentIndex);
+                });
+
+                dots.forEach((dot, i) => {
+                    const isActive = i === currentIndex;
+                    dot.classList.toggle('active', isActive);
+
+                    // Re-trigger progress bar animation on the active dot
+                    const progress = dot.querySelector('.testimonial2-dot-progress');
+                    if (progress) {
+                        progress.style.animation = 'none';
+                        if (isActive) {
+                            void progress.offsetWidth; // trigger reflow
+                            progress.style.animation = '';
+                        }
+                    }
+                });
+
+                resetTimer();
+            }
+
+            function nextSlide() {
+                goToSlide(currentIndex + 1);
+            }
+
+            function prevSlide() {
+                goToSlide(currentIndex - 1);
+            }
+
+            function resetTimer() {
+                if (timer) clearInterval(timer);
+                timer = setInterval(nextSlide, SLIDE_DURATION);
+            }
+
+            if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+            if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+            dots.forEach((dot) => {
+                dot.addEventListener('click', () => {
+                    const idx = parseInt(dot.getAttribute('data-index'), 10);
+                    if (!isNaN(idx)) goToSlide(idx);
+                });
+            });
+
+            // Pause on hover, resume on mouse leave
+            if (wrapper) {
+                wrapper.addEventListener('mouseenter', () => {
+                    if (timer) clearInterval(timer);
+                });
+                wrapper.addEventListener('mouseleave', () => {
+                    resetTimer();
+                });
+            }
+
+            // Mobile touch swipe support
+            let touchStartX = 0;
+            let touchEndX = 0;
+            slider.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            slider.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                const diff = touchEndX - touchStartX;
+                if (Math.abs(diff) > 40) {
+                    const isRtl = document.documentElement.getAttribute('dir') === 'rtl';
+                    if (diff > 0) {
+                        isRtl ? nextSlide() : prevSlide();
+                    } else {
+                        isRtl ? prevSlide() : nextSlide();
+                    }
+                }
+            }, { passive: true });
+
+            // Start 5s auto-rotation
+            resetTimer();
+        })();
+    </script>
 </body>
 </html>
