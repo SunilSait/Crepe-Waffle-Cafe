@@ -3,27 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Page not found — Crepe & Waffle Café. The page you're looking for doesn't exist.">
+    <meta name="description" content="Page not found — Crepe & Waffle Café. The page you're looking for doesn't exist or has been moved.">
     <title>404 — Page Not Found | Crepe & Waffle Café</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="style.css">
+        <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
     <script src="components.js" defer></script>
 </head>
 <body class="fullscreen-page">
-    <!-- Top Actions -->
-    <div class="fullscreen-top-actions">
-        <button onclick="toggleDir(event)" class="nav-icon-btn" title="Toggle Direction" aria-label="Toggle direction">
-            <span class="dir-label" style="font-size:0.625rem;font-weight:600;">RTL</span>
-        </button>
-        <button onclick="toggleTheme(event)" class="nav-icon-btn" title="Toggle Theme" aria-label="Toggle dark mode">
-            <span class="theme-icon-wrap"></span>
-        </button>
-    </div>
 
-    <div class="error-card">
-        <!-- Logo links to home -->
-        <a href="index.html" class="auth-logo" aria-label="Home" style="margin-bottom:32px;">
-            <svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Top Bar in Flow -->
+    <header class="fullscreen-topbar">
+        <a href="index.html" class="nav-logo" aria-label="Crepe & Waffle Café Home">
+            <svg width="38" height="38" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:38px;height:38px;object-fit:contain;display:block;">
                 <rect x="15" y="35" width="70" height="55" rx="10" fill="var(--primary)"/>
                 <line x1="35" y1="35" x2="35" y2="90" stroke="var(--secondary)" stroke-width="2" opacity="0.3"/>
                 <line x1="50" y1="35" x2="50" y2="90" stroke="var(--secondary)" stroke-width="2" opacity="0.3"/>
@@ -42,15 +35,58 @@
             </div>
         </a>
 
-        <div class="error-code">404</div>
-        <h2 class="error-title">Oops! Page Not Found</h2>
-        <p class="error-desc">The page you're looking for seems to have wandered off. Perhaps it went to grab a crepe.</p>
-        <div class="error-ctas">
-            <a href="index.html" class="btn btn-primary">Back to Home</a>
-            <a href="menu.html" class="btn btn-secondary">View Menu</a>
+        <div style="display:flex;gap:0.5rem;align-items:center;">
+            <button onclick="toggleDir(event)" class="auth-toggle-btn" title="Toggle Direction" aria-label="Toggle direction">
+                <span class="dir-label" style="font-size:0.625rem;font-weight:600;">LTR</span>
+            </button>
+            <button onclick="toggleTheme(event)" class="auth-toggle-btn" title="Toggle Theme" aria-label="Toggle dark mode">
+                <span class="theme-icon-wrap"></span>
+            </button>
         </div>
-    </div>
+    </header>
 
-    <script>initAuthPage();</script>
+    <!-- Main Content -->
+    <main class="fullscreen-content">
+        <div class="fullscreen-box">
+            <!-- Decorative Ambient Glow -->
+            <div class="fullscreen-glow"></div>
+
+            <div style="position:relative;z-index:2;">
+                <!-- Error Code Illustration with Spinning Waffle/Crepe Watermark -->
+                <div class="error-illustration">
+                    <svg class="crepe-spin" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="20" y="20" width="60" height="60" rx="12" stroke="var(--primary)" stroke-width="4" opacity="0.4"/>
+                        <line x1="35" y1="20" x2="35" y2="80" stroke="var(--primary)" stroke-width="3" opacity="0.3"/>
+                        <line x1="50" y1="20" x2="50" y2="80" stroke="var(--primary)" stroke-width="3" opacity="0.3"/>
+                        <line x1="65" y1="20" x2="65" y2="80" stroke="var(--primary)" stroke-width="3" opacity="0.3"/>
+                        <line x1="20" y1="35" x2="80" y2="35" stroke="var(--primary)" stroke-width="3" opacity="0.3"/>
+                        <line x1="20" y1="50" x2="80" y2="50" stroke="var(--primary)" stroke-width="3" opacity="0.3"/>
+                        <line x1="20" y1="65" x2="80" y2="65" stroke="var(--primary)" stroke-width="3" opacity="0.3"/>
+                    </svg>
+                    <div class="error-code">404</div>
+                </div>
+
+                <h1 class="error-subtitle">Page Not Found</h1>
+                <p class="error-desc">
+                    Looks like this treat went missing! The page you're searching for has been moved, eaten, or never existed in our bakery.
+                </p>
+
+                <!-- Actions -->
+                <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
+                    <a href="index.html" class="btn btn-primary btn-lg">
+                        <i class="fa-solid fa-house"></i>
+                        Back to Home
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary btn-lg"><i class="fa-solid fa-envelope"></i> Contact Support</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof initAuthPage === 'function') initAuthPage();
+        });
+    </script>
 </body>
 </html>
