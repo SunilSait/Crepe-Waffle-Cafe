@@ -37,47 +37,36 @@ const ICONS = {
 /* ─── Brand Logo SVG ──────────────────────────────────── */
 const LOGO_SVG = `<svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
     <defs>
-        <linearGradient id="cwLogoBg" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#E11D48"/>
-            <stop offset="50%" stop-color="#BE123C"/>
-            <stop offset="100%" stop-color="#881337"/>
+        <linearGradient id="cwMedallionBg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#9F1239"/>
+            <stop offset="45%" stop-color="#BE123C"/>
+            <stop offset="100%" stop-color="#700B2B"/>
         </linearGradient>
-        <linearGradient id="cwWaffle" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#FCD34D"/>
-            <stop offset="50%" stop-color="#F59E0B"/>
-            <stop offset="100%" stop-color="#D97706"/>
+        <linearGradient id="cwGold" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FEF08A"/>
+            <stop offset="45%" stop-color="#F59E0B"/>
+            <stop offset="100%" stop-color="#B45309"/>
         </linearGradient>
-        <linearGradient id="cwCrepe" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#FFF5F5"/>
-            <stop offset="45%" stop-color="#FFE4E6"/>
-            <stop offset="100%" stop-color="#FECDD3"/>
-        </linearGradient>
-        <filter id="cwShadow" x="-10%" y="-10%" width="120%" height="120%">
-            <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#881337" flood-opacity="0.3"/>
+        <filter id="cwProShadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="2.5" stdDeviation="3.5" flood-color="#000000" flood-opacity="0.32"/>
         </filter>
     </defs>
-    <rect x="8" y="8" width="84" height="84" rx="24" fill="url(#cwLogoBg)" filter="url(#cwShadow)"/>
-    <rect x="9.5" y="9.5" width="81" height="81" rx="22.5" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
-    <!-- Belgian Waffle Grid Pockets -->
-    <g transform="translate(20, 36)">
-        <rect x="0" y="0" width="38" height="38" rx="9" fill="url(#cwWaffle)"/>
-        <rect x="4" y="4" width="13" height="13" rx="3.5" fill="#78350F" opacity="0.45"/>
-        <rect x="21" y="4" width="13" height="13" rx="3.5" fill="#78350F" opacity="0.45"/>
-        <rect x="4" y="21" width="13" height="13" rx="3.5" fill="#78350F" opacity="0.45"/>
-        <rect x="21" y="21" width="13" height="13" rx="3.5" fill="#78350F" opacity="0.45"/>
-        <circle cx="10.5" cy="10.5" r="1.5" fill="#FFFFFF" opacity="0.85"/>
-        <circle cx="27.5" cy="27.5" r="1.5" fill="#FFFFFF" opacity="0.85"/>
-    </g>
-    <!-- French Folded Crepe Ribbon -->
-    <path d="M40 22 C56 16, 78 22, 82 38 C86 54, 72 74, 52 78 C40 68, 42 48, 54 38 C62 30, 50 24, 40 22 Z" fill="url(#cwCrepe)"/>
-    <path d="M46 25 C58 20, 75 26, 78 38 C81 50, 70 66, 56 73" stroke="#D97706" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="2.5 3.5" opacity="0.75"/>
-    <path d="M52 38 C60 44, 58 56, 50 64" stroke="#D97706" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
-    <!-- Fresh Raspberry & Mint Accent -->
-    <circle cx="48" cy="22" r="5" fill="#BE123C"/>
-    <circle cx="46.5" cy="20.5" r="1.5" fill="#FDA4AF"/>
-    <circle cx="56" cy="19" r="4" fill="#9F1239"/>
-    <circle cx="55" cy="18" r="1.2" fill="#FDA4AF"/>
-    <path d="M51 15 C54 10, 59 11, 59 14 C59 17, 54 18, 51 15 Z" fill="#34D399"/>
+    <!-- Professional Medallion -->
+    <circle cx="50" cy="50" r="46" fill="url(#cwMedallionBg)" filter="url(#cwProShadow)"/>
+    <circle cx="50" cy="50" r="42" stroke="url(#cwGold)" stroke-width="1.6" opacity="0.9"/>
+    <circle cx="50" cy="50" r="38.5" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+
+    <!-- Geometric Waffle "W" (in warm champagne gold) -->
+    <path d="M27 38 L37 68 L48 44" stroke="url(#cwGold)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M52 44 L63 68 L73 38" stroke="url(#cwGold)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="32" y1="53" x2="68" y2="53" stroke="url(#cwGold)" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
+
+    <!-- Sweeping French Crepe "C" (flowing silk arc in white & gold) -->
+    <path d="M68 28 C44 17, 22 34, 24 56 C26 76, 50 82, 70 71" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M63 25 C45 18, 28 32, 29 50" stroke="url(#cwGold)" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+
+    <!-- Artisan Crown Star -->
+    <path d="M50 14 L51.8 19.8 L57.5 21.5 L51.8 23.2 L50 29 L48.2 23.2 L42.5 21.5 L48.2 19.8 Z" fill="url(#cwGold)"/>
 </svg>`;
 
 /* ─── Social Login SVGs ───────────────────────────────── */
