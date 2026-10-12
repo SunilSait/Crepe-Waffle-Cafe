@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Logo Options Preview</title>
+<style>
+  body {
+    background: #0F0D0E;
+    color: #FFF;
+    font-family: system-ui, sans-serif;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .row {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  .card {
+    background: #191617;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 240px;
+  }
+  .brand-preview {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .brand-top {
+    font-family: serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: #FB7185;
+  }
+  .brand-bottom {
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #FBBF24;
+  }
+  .light-bg {
+    background: #FFF;
+    color: #111;
+  }
+  .light-bg .brand-top { color: #BE123C; }
+  .light-bg .brand-bottom { color: #D97706; }
+</style>
+</head>
+<body>
+  <h1>Crepe & Waffle Logo Concepts</h1>
+
+  <div class="row">
+
+    <!-- CONCEPT 1: Artisan Seal (Waffle Heart + Golden Crepe Ribbon) -->
+    <div class="card">
+      <h3>Option 1: Artisan Crest</h3>
+      <div class="brand-preview">
+        <svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#E11D48"/>
+              <stop offset="100%" stop-color="#881337"/>
+            </linearGradient>
+            <linearGradient id="waffleGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FBBF24"/>
+              <stop offset="50%" stop-color="#F59E0B"/>
+              <stop offset="100%" stop-color="#D97706"/>
+            </linearGradient>
+            <linearGradient id="crepeGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFF1F2"/>
+              <stop offset="60%" stop-color="#FFE4E6"/>
+              <stop offset="100%" stop-color="#FECDD3"/>
+            </linearGradient>
+            <filter id="glow1" x="-10%" y="-10%" width="120%" height="120%">
+              <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#E11D48" flood-opacity="0.35"/>
+            </filter>
+          </defs>
+          <!-- Outer Rounded Squircle -->
+          <rect x="6" y="6" width="88" height="88" rx="26" fill="url(#bgGrad1)" filter="url(#glow1)"/>
+          <rect x="7" y="7" width="86" height="86" rx="25" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+          
+          <!-- Belgian Waffle Grid Pockets (Bottom-Left) -->
+          <g transform="translate(18, 38)">
+            <!-- Grid Base -->
+            <rect x="0" y="0" width="40" height="40" rx="10" fill="url(#waffleGrad1)"/>
+            <!-- 4 Pockets -->
+            <rect x="4" y="4" width="14" height="14" rx="4" fill="#92400E" opacity="0.55"/>
+            <rect x="22" y="4" width="14" height="14" rx="4" fill="#92400E" opacity="0.55"/>
+            <rect x="4" y="22" width="14" height="14" rx="4" fill="#92400E" opacity="0.55"/>
+            <rect x="22" y="22" width="14" height="14" rx="4" fill="#92400E" opacity="0.55"/>
+            <!-- Pearl Sugar sparkles -->
+            <circle cx="11" cy="11" r="2" fill="#FFF" opacity="0.8"/>
+            <circle cx="29" cy="29" r="2" fill="#FFF" opacity="0.8"/>
+          </g>
+
+          <!-- French Crepe Fold (Top-Right Sweeping Over Waffle) -->
+          <!-- Fold path -->
+          <path d="M42 22 C56 16, 78 22, 82 38 C86 52, 74 72, 54 78 C42 66, 44 48, 56 38 C64 30, 52 24, 42 22 Z" fill="url(#crepeGrad1)"/>
+          <!-- Crepe golden browning lace -->
+          <path d="M48 24 C60 20, 76 26, 79 38 C81 48, 72 64, 58 72" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 4" opacity="0.75"/>
+          <path d="M54 36 C62 42, 60 56, 52 64" stroke="#D97706" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+
+          <!-- Berry & Mint Leaf on Top -->
+          <circle cx="48" cy="22" r="5" fill="#BE123C"/>
+          <circle cx="47" cy="20" r="1.5" fill="#FDA4AF"/>
+          <circle cx="56" cy="19" r="4" fill="#9F1239"/>
+          <path d="M51 16 C53 11, 58 12, 58 15 C58 18, 53 19, 51 16 Z" fill="#34D399"/>
+        </svg>
+
+        <div class="brand-text">
+          <span class="brand-top">CREPE</span>
+          <span class="brand-bottom">& Waffle</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONCEPT 2: Modern Luxury Monogram (Interlocking Heart & Waffle Flourish) -->
+    <div class="card">
+      <h3>Option 2: Parisian Emblem</h3>
+      <div class="brand-preview">
+        <svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#9F1239"/>
+              <stop offset="100%" stop-color="#4C0519"/>
+            </linearGradient>
+            <linearGradient id="gold2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FDE68A"/>
+              <stop offset="40%" stop-color="#F59E0B"/>
+              <stop offset="100%" stop-color="#B45309"/>
+            </linearGradient>
+          </defs>
+          <!-- Squircle -->
+          <rect x="6" y="6" width="88" height="88" rx="26" fill="url(#bgGrad2)"/>
+          <rect x="7" y="7" width="86" height="86" rx="25" stroke="url(#gold2)" stroke-width="1.5" opacity="0.6"/>
+
+          <!-- Stylized Geometric Waffle Lattice -->
+          <g transform="translate(24, 24)">
+            <!-- Diamond waffle plate -->
+            <rect x="0" y="0" width="52" height="52" rx="14" fill="#1C1917" stroke="url(#gold2)" stroke-width="2"/>
+            <!-- 4 Waffle Indentations -->
+            <rect x="6" y="6" width="16" height="16" rx="5" fill="url(#gold2)" opacity="0.85"/>
+            <rect x="30" y="6" width="16" height="16" rx="5" fill="url(#gold2)" opacity="0.85"/>
+            <rect x="6" y="30" width="16" height="16" rx="5" fill="url(#gold2)" opacity="0.85"/>
+            <rect x="30" y="30" width="16" height="16" rx="5" fill="url(#gold2)" opacity="0.85"/>
+
+            <!-- Center Fold Curve (Crepe swoosh across the waffle) -->
+            <path d="M-4 36 C10 14, 38 10, 56 -2" stroke="#FFF1F2" stroke-width="5" stroke-linecap="round"/>
+            <path d="M2 42 C16 22, 42 16, 58 4" stroke="#FB7185" stroke-width="2" stroke-linecap="round"/>
+          </g>
+          
+          <!-- Crown Berry -->
+          <circle cx="50" cy="18" r="4.5" fill="#E11D48" stroke="#FFF" stroke-width="1"/>
+        </svg>
+
+        <div class="brand-text">
+          <span class="brand-top">CREPE</span>
+          <span class="brand-bottom">& Waffle</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONCEPT 3: Pure Minimalist Artisan (French Crepe Fold + Belgian Grid) -->
+    <div class="card">
+      <h3>Option 3: Pure Artisan</h3>
+      <div class="brand-preview">
+        <svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#BE123C"/>
+              <stop offset="50%" stop-color="#9F1239"/>
+              <stop offset="100%" stop-color="#700B2B"/>
+            </linearGradient>
+            <linearGradient id="crepeGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FEF3C7"/>
+              <stop offset="50%" stop-color="#FDE68A"/>
+              <stop offset="100%" stop-color="#F59E0B"/>
+            </linearGradient>
+          </defs>
+          <rect x="8" y="8" width="84" height="84" rx="24" fill="url(#bgGrad3)"/>
+          <rect x="9" y="9" width="82" height="82" rx="23" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+
+          <!-- Elegant Cast-Iron Belgian Waffle Grid -->
+          <rect x="22" y="24" width="56" height="56" rx="14" fill="#580820" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+          
+          <!-- 9-dot Waffle Wells -->
+          <rect x="27" y="29" width="11" height="11" rx="3.5" fill="#F59E0B" opacity="0.9"/>
+          <rect x="44" y="29" width="11" height="11" rx="3.5" fill="#F59E0B" opacity="0.9"/>
+          <rect x="61" y="29" width="11" height="11" rx="3.5" fill="#F59E0B" opacity="0.9"/>
+
+          <rect x="27" y="46" width="11" height="11" rx="3.5" fill="#F59E0B" opacity="0.9"/>
+          <rect x="44" y="46" width="11" height="11" rx="3.5" fill="#F59E0B" opacity="0.9"/>
+          <rect x="61" y="46" width="11" height="11" rx="3.5" fill="#F59E0B" opacity="0.9"/>
+
+          <rect x="27" y="63" width="11" height="11" rx="3.5" fill="#F59E0B" opacity="0.9"/>
+          <rect x="44" y="63" width="11" height="11" rx="3.5" fill="#F59E0B" opacity="0.9"/>
+          <rect x="61" y="63" width="11" height="11" rx="3.5" fill="#F59E0B" opacity="0.9"/>
+
+          <!-- Silken Diagonal Crepe Wrap (folding across) -->
+          <path d="M16 48 C22 28, 48 18, 76 16 C84 32, 78 62, 54 78 C36 84, 20 74, 16 48 Z" fill="url(#crepeGrad3)" opacity="0.92"/>
+          <path d="M24 44 C34 30, 52 24, 74 20" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 4" opacity="0.8"/>
+          <!-- Butter pat & Raspberry -->
+          <rect x="46" y="32" width="10" height="8" rx="2.5" fill="#FEF08A" transform="rotate(-15 46 32)"/>
+          <circle cx="58" cy="28" r="4.5" fill="#9F1239"/>
+          <circle cx="57" cy="27" r="1.2" fill="#FFF"/>
+        </svg>
+
+        <div class="brand-text">
+          <span class="brand-top">CREPE</span>
+          <span class="brand-bottom">& Waffle</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
