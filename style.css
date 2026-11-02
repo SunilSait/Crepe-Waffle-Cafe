@@ -6323,6 +6323,11 @@ html.dark .map-floating-badge {
 
     .reviews-masonry { grid-template-columns: 1fr; }
 
+    .story-features {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
     .parallax-banner { height: 320px; }
 }
 
@@ -8452,3 +8457,1307 @@ html.dark .boutique-perk i {
 
 
 
+
+
+/* ─── HOME PAGE VISUAL ENHANCEMENTS & EXPLORE/VISIT CTAS ─── */
+
+/* 1. Combos Bottom CTA Card */
+.combos-bottom-cta {
+    margin-top: 52px;
+    display: flex;
+    justify-content: center;
+}
+
+.combos-bottom-cta-card {
+    width: 100%;
+    max-width: 1040px;
+    background: var(--bg-card);
+    border: 1.5px solid var(--border-card);
+    border-radius: var(--radius-xl);
+    padding: 36px 44px;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 36px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.combos-bottom-cta-card:hover {
+    border-color: rgba(190, 18, 60, 0.4);
+    box-shadow: 0 16px 36px -10px rgba(190, 18, 60, 0.15);
+}
+
+html.dark .combos-bottom-cta-card {
+    background: #181514;
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+html.dark .combos-bottom-cta-card:hover {
+    border-color: rgba(251, 113, 133, 0.45);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+}
+
+[dir="rtl"] .combos-bottom-cta-card {
+    text-align: right;
+}
+
+.combos-cta-content {
+    flex: 1;
+}
+
+.combos-cta-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+html.dark .combos-cta-tag {
+    color: #FDA4AF;
+}
+
+.combos-cta-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.combos-cta-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+    max-width: 620px;
+}
+
+.combos-cta-buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 860px) {
+    .combos-bottom-cta-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 24px;
+        gap: 24px;
+    }
+    [dir="rtl"] .combos-bottom-cta-card {
+        text-align: center;
+    }
+    .combos-cta-desc {
+        max-width: 100%;
+    }
+    .combos-cta-buttons {
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .combos-cta-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* 2. Story Section CTAs & Ambiance Badge */
+.story-ctas {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.story-img-badge-ambiance {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(18, 14, 13, 0.82);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #FFFFFF;
+    padding: 8px 18px;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 0.82rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    letter-spacing: 0.02em;
+    z-index: 2;
+}
+
+[dir="rtl"] .story-img-badge-ambiance {
+    right: auto;
+    left: 20px;
+}
+
+.story-img-badge-ambiance i {
+    color: #FBBF24;
+}
+
+/* 3. Culinary Process Spotlight Banner */
+.process-spotlight {
+    margin-top: 56px;
+    position: relative;
+    z-index: 1;
+}
+
+.process-spotlight-card {
+    background: var(--bg-card);
+    border: 1.5px solid var(--border-card);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: stretch;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.process-spotlight-card:hover {
+    box-shadow: var(--shadow-card-hover);
+}
+
+html.dark .process-spotlight-card {
+    background: #181514;
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.process-spotlight-img {
+    position: relative;
+    min-height: 320px;
+    overflow: hidden;
+}
+
+.process-spotlight-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.process-spotlight-card:hover .process-spotlight-img img {
+    transform: scale(1.06);
+}
+
+.process-spotlight-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: var(--primary);
+    color: #FFFFFF;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 7px 16px;
+    border-radius: var(--radius-full);
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    box-shadow: 0 4px 14px rgba(190, 18, 60, 0.45);
+    letter-spacing: 0.03em;
+}
+
+[dir="rtl"] .process-spotlight-badge {
+    left: auto;
+    right: 20px;
+}
+
+.process-spotlight-content {
+    padding: 44px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+[dir="rtl"] .process-spotlight-content {
+    text-align: right;
+}
+
+.process-spotlight-tag {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    margin-bottom: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+html.dark .process-spotlight-tag {
+    color: #FDA4AF;
+}
+
+.process-spotlight-content h3 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    color: var(--text-primary);
+}
+
+.process-spotlight-content p {
+    font-size: 0.96rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 24px;
+}
+
+.process-spotlight-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 860px) {
+    .process-spotlight-card {
+        grid-template-columns: 1fr;
+    }
+    .process-spotlight-img {
+        min-height: 240px;
+    }
+    .process-spotlight-content {
+        padding: 30px 24px;
+        text-align: center;
+    }
+    [dir="rtl"] .process-spotlight-content {
+        text-align: center;
+    }
+    .process-spotlight-actions {
+        justify-content: center;
+    }
+}
+
+/* 4. Gallery Bottom CTA Strip */
+.gallery-bottom-cta {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.gallery-cta-desc {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.gallery-cta-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 580px) {
+    .gallery-cta-buttons {
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .gallery-cta-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* 5. Photographic Backdrop & Styling for Parisian Berry CTA Card */
+.cta-berry-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.20;
+    filter: saturate(1.25) brightness(0.9);
+    pointer-events: none;
+    z-index: 0;
+    transition: opacity 0.5s ease;
+}
+
+.cta-berry-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(136, 19, 55, 0.78) 0%, rgba(76, 5, 25, 0.94) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cta-card--berry > *:not(.cta-berry-bg-img):not(.cta-berry-img-overlay):not(.cta-card-berry-glow-top):not(.cta-card-berry-glow-bottom) {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-catering-hint {
+    margin-top: 26px;
+    font-size: 0.92rem;
+    position: relative;
+    z-index: 2;
+}
+
+.cta-catering-hint a {
+    color: #FFE4E6;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-weight: 500;
+    transition: color var(--transition-fast), transform var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cta-catering-hint a:hover {
+    color: #FFFFFF;
+    transform: translateY(-1px);
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   ABOUT US PAGE STYLING
+   ───────────────────────────────────────────────────────── */
+
+/* 2. Our Passion Section & Dual Craft Cards */
+.passion-section {
+    padding: var(--section-pad-y) 0;
+    background: var(--bg-section-alt);
+    position: relative;
+    overflow: hidden;
+}
+
+.passion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    margin-top: 52px;
+    margin-bottom: 48px;
+}
+
+.passion-card {
+    background: var(--bg-card);
+    border: 1.5px solid var(--border-card);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.passion-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: rgba(190, 18, 60, 0.45);
+}
+
+[dir="rtl"] .passion-card {
+    text-align: right;
+}
+
+.passion-card-media {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+.passion-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.passion-card:hover .passion-card-media img {
+    transform: scale(1.06);
+}
+
+.passion-card-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 7px 16px;
+    border-radius: var(--radius-full);
+    font-size: 0.78rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    letter-spacing: 0.04em;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+[dir="rtl"] .passion-card-badge {
+    left: auto;
+    right: 20px;
+}
+
+.passion-card-badge.berry-pill {
+    background: rgba(190, 18, 60, 0.88);
+    border: 1px solid rgba(251, 113, 133, 0.4);
+    color: #FFFFFF;
+}
+
+.passion-card-badge.gold-pill {
+    background: rgba(180, 83, 9, 0.88);
+    border: 1px solid rgba(251, 191, 36, 0.4);
+    color: #FFFFFF;
+}
+
+.passion-card-body {
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.passion-card-meta {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+html.dark .passion-card-meta {
+    color: #FDA4AF;
+}
+
+.passion-card-title {
+    font-family: var(--font-heading);
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+    line-height: 1.25;
+}
+
+.passion-card-desc {
+    font-size: 0.98rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.passion-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.passion-features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.p-feat-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-md);
+    background: rgba(190, 18, 60, 0.1);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+html.dark .p-feat-icon {
+    background: rgba(251, 113, 133, 0.15);
+    color: #FDA4AF;
+}
+
+.passion-features-list strong {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.passion-features-list span {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* Passion Metric Ribbon */
+.passion-metric-ribbon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-card);
+    border: 1.5px solid var(--border-card);
+    border-radius: var(--radius-xl);
+    padding: 24px 40px;
+    box-shadow: var(--shadow-card);
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.p-ribbon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.p-ribbon-val {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+html.dark .p-ribbon-val {
+    color: #FB7185;
+}
+
+.p-ribbon-lbl {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+}
+
+.p-ribbon-sep {
+    width: 1px;
+    height: 36px;
+    background: var(--border-color);
+}
+
+@media (max-width: 900px) {
+    .passion-grid {
+        grid-template-columns: 1fr;
+    }
+    .passion-metric-ribbon {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 24px;
+    }
+    .p-ribbon-sep {
+        display: none;
+    }
+}
+
+/* 3. About Signatures Grid */
+.about-signatures-section {
+    padding: var(--section-pad-y) 0;
+    background: var(--bg-main);
+}
+
+.about-signatures-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 52px;
+    margin-bottom: 48px;
+}
+
+.signature-card {
+    background: var(--bg-card);
+    border: 1.5px solid var(--border-card);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.signature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: var(--primary);
+}
+
+[dir="rtl"] .signature-card {
+    text-align: right;
+}
+
+.signature-card-media {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.signature-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.signature-card:hover .signature-card-media img {
+    transform: scale(1.08);
+}
+
+.signature-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 5px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+[dir="rtl"] .signature-tag {
+    left: auto;
+    right: 14px;
+}
+
+.signature-tag.sweet {
+    background: rgba(190, 18, 60, 0.9);
+    color: #FFFFFF;
+}
+
+.signature-tag.waffle {
+    background: rgba(217, 119, 6, 0.92);
+    color: #FFFFFF;
+}
+
+.signature-tag.savory {
+    background: rgba(13, 148, 136, 0.92);
+    color: #FFFFFF;
+}
+
+.signature-card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.signature-price-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.signature-title {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.25;
+    margin: 0;
+}
+
+.signature-price {
+    font-family: var(--font-number);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+html.dark .signature-price {
+    color: #FB7185;
+}
+
+.signature-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 18px;
+    flex: 1;
+}
+
+.signature-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.signature-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    font-size: 0.74rem;
+    font-weight: 600;
+    background: rgba(190, 18, 60, 0.06);
+    color: var(--primary);
+    border: 1px solid rgba(190, 18, 60, 0.16);
+}
+
+html.dark .signature-pill {
+    background: rgba(251, 113, 133, 0.12);
+    color: #FDA4AF;
+    border-color: rgba(251, 113, 133, 0.25);
+}
+
+.about-signatures-cta {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.about-cta-subtext {
+    font-size: 1rem;
+    color: var(--text-muted);
+    max-width: 620px;
+}
+
+.about-cta-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 992px) {
+    .about-signatures-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .about-signatures-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 4. Quality Standards Pledge Banner */
+.about-pledge-card {
+    margin-top: 56px;
+    background: var(--bg-card);
+    border: 1.5px solid var(--border-card);
+    border-radius: var(--radius-xl);
+    padding: 48px 40px;
+    box-shadow: var(--shadow-card);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-pledge-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border-radius: var(--radius-full);
+    background: rgba(16, 185, 129, 0.12);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #10B981;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 16px;
+}
+
+.about-pledge-inner h3 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.about-pledge-inner > p {
+    font-size: 0.98rem;
+    color: var(--text-muted);
+    max-width: 580px;
+    margin: 0 auto 36px;
+}
+
+.about-pledge-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.pledge-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 16px 12px;
+}
+
+.pledge-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(190, 18, 60, 0.12) 0%, rgba(245, 158, 11, 0.12) 100%);
+    border: 1px solid rgba(190, 18, 60, 0.2);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    margin-bottom: 14px;
+}
+
+html.dark .pledge-icon {
+    color: #FDA4AF;
+    border-color: rgba(251, 113, 133, 0.3);
+}
+
+.pledge-item h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.pledge-item p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 860px) {
+    .about-pledge-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-pledge-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 5. Meet Our Team Section */
+.team-section {
+    padding: var(--section-pad-y) 0;
+    background: var(--bg-section-alt);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
+    margin-top: 52px;
+    margin-bottom: 48px;
+}
+
+.team-card {
+    background: var(--bg-card);
+    border: 1.5px solid var(--border-card);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: rgba(190, 18, 60, 0.45);
+}
+
+[dir="rtl"] .team-card {
+    text-align: right;
+}
+
+.team-card-media {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+.team-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.team-card:hover .team-card-media img {
+    transform: scale(1.06);
+}
+
+.team-role-pill {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    background: rgba(18, 14, 13, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: #FFFFFF;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 5px 12px;
+    border-radius: var(--radius-full);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+[dir="rtl"] .team-role-pill {
+    left: auto;
+    right: 14px;
+}
+
+.team-card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.team-name {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.team-title {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 14px;
+    display: block;
+}
+
+html.dark .team-title {
+    color: #FB7185;
+}
+
+.team-bio {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 16px;
+    flex: 1;
+}
+
+.team-quote {
+    font-size: 0.84rem;
+    font-style: italic;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    border-left: 2.5px solid var(--primary);
+    padding-left: 12px;
+    margin: 0 0 18px 0;
+}
+
+[dir="rtl"] .team-quote {
+    border-left: none;
+    border-right: 2.5px solid var(--primary);
+    padding-left: 0;
+    padding-right: 12px;
+}
+
+.team-socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.team-socials a {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(190, 18, 60, 0.08);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    transition: all var(--transition-fast);
+}
+
+.team-socials a:hover {
+    background: var(--primary);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+html.dark .team-socials a {
+    background: rgba(255, 255, 255, 0.08);
+    color: #FDA4AF;
+}
+
+html.dark .team-socials a:hover {
+    background: var(--primary);
+    color: #FFFFFF;
+}
+
+/* Team Join Box */
+.team-join-box {
+    background: var(--bg-card);
+    border: 1.5px solid var(--border-card);
+    border-radius: var(--radius-xl);
+    padding: 30px 36px;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    text-align: left;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+[dir="rtl"] .team-join-box {
+    text-align: right;
+}
+
+.team-join-text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.team-join-text i {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+html.dark .team-join-text i {
+    color: #FB7185;
+}
+
+.team-join-text h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--text-primary);
+}
+
+.team-join-text p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .team-join-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px;
+    }
+    .team-join-text {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 580px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    .team-card-media {
+        height: 280px;
+    }
+}
+
+/* 6. Café Experience Showcase */
+.experience-showcase-section {
+    padding: var(--section-pad-y) 0;
+    background: var(--bg-main);
+}
+
+.experience-showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 52px;
+    margin-bottom: 44px;
+}
+
+.exp-showcase-card {
+    background: var(--bg-card);
+    border: 1.5px solid var(--border-card);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.exp-showcase-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-card-hover);
+    border-color: var(--primary);
+}
+
+[dir="rtl"] .exp-showcase-card {
+    text-align: right;
+}
+
+.exp-card-media {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}
+
+.exp-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.exp-showcase-card:hover .exp-card-media img {
+    transform: scale(1.08);
+}
+
+.exp-badge {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    background: rgba(18, 14, 13, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: #FFFFFF;
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+[dir="rtl"] .exp-badge {
+    left: auto;
+    right: 14px;
+}
+
+.exp-card-content {
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.exp-card-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.exp-card-content p {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* Amenities Pills Row */
+.about-amenities-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.amenity-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 18px;
+    border-radius: var(--radius-full);
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    color: var(--text-primary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-fast);
+}
+
+.amenity-pill i {
+    color: var(--primary);
+}
+
+html.dark .amenity-pill i {
+    color: #FB7185;
+}
+
+.amenity-pill:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(190, 18, 60, 0.15);
+}
+
+@media (max-width: 900px) {
+    .experience-showcase-grid {
+        grid-template-columns: 1fr;
+    }
+}

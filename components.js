@@ -145,6 +145,7 @@ function buildNavbar() {
     const links = [
         { href: 'index.html', label: 'Home' },
         { href: 'home2.html', label: 'Home 2' },
+        { href: 'about.html', label: 'About Us' },
         { href: 'menu.html', label: 'Menu' },
         { href: 'catering.html', label: 'Catering' },
         { href: 'locations.html', label: 'Locations' },
@@ -292,6 +293,7 @@ function buildFooter() {
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="home2.html">Home 2 — Premium</a></li>
+                        <li><a href="about.html">About Us</a></li>
                         <li><a href="menu.html">Our Menu</a></li>
                         <li><a href="catering.html">Catering Orders</a></li>
                         <li><a href="locations.html">Locations</a></li>
