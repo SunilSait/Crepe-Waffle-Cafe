@@ -155,6 +155,10 @@ function buildNavbar() {
     const isDark = document.documentElement.classList.contains('dark');
     const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
 
+    const navCtaHref = 'welcome.html';
+    const navCtaLabel = 'Visit Our Café';
+    const navCtaIcon = '<i class="fa-solid fa-location-dot"></i>';
+
     const navLinksHTML = links.map(l => {
         const isActive = currentPage === l.href || (currentPage === '' && l.href === 'index.html');
         return `<a href="${l.href}" class="nav-link ${isActive ? 'active' : ''}">${l.label}</a>`;
@@ -188,7 +192,11 @@ function buildNavbar() {
                 <button onclick="toggleTheme(event)" class="nav-icon-btn" title="Toggle Theme" aria-label="Toggle dark mode">
                     <span class="theme-icon-wrap">${isDark ? ICONS.sun : ICONS.moon}</span>
                 </button>
-                <a href="login.html" class="btn btn-primary btn-sm">Sign In</a>
+                <a href="login.html" class="btn btn-secondary btn-sm nav-signin-btn">Sign In</a>
+                <a href="${navCtaHref}" class="btn btn-primary btn-sm nav-cta-btn">
+                    ${navCtaIcon}
+                    <span>${navCtaLabel}</span>
+                </a>
                 <button class="mobile-menu-btn" onclick="toggleMobileMenu(event)" aria-label="Toggle navigation menu">
                     <span class="mobile-menu-icon">${ICONS.menu}</span>
                 </button>
@@ -200,7 +208,10 @@ function buildNavbar() {
         <div class="mobile-menu" id="mobile-menu">
             ${mobileLinksHTML}
             <div class="mob-actions">
-                <a href="login.html" class="btn btn-primary w-full">Sign In</a>
+                <a href="${navCtaHref}" class="btn btn-primary w-full">
+                    ${navCtaIcon} <span>${navCtaLabel}</span>
+                </a>
+                <a href="login.html" class="btn btn-secondary w-full">Sign In</a>
             </div>
             <div class="mob-toggles">
                 <button onclick="toggleDir(event)" class="nav-icon-btn" title="Toggle Direction" aria-label="Toggle direction">
@@ -214,7 +225,7 @@ function buildNavbar() {
     </header>
     <div class="navbar-spacer"></div>`;
 
-    nav.querySelectorAll('.mob-link').forEach(link => {
+    nav.querySelectorAll('.mob-link, .mob-actions a').forEach(link => {
         link.addEventListener('click', () => {
             const menu = document.getElementById('mobile-menu');
             const backdrop = document.getElementById('mobile-backdrop');
@@ -294,6 +305,7 @@ function buildFooter() {
                         <li><a href="index.html">Home</a></li>
                         <li><a href="home2.html">Home 2 — Premium</a></li>
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="welcome.html">Welcome Guide</a></li>
                         <li><a href="menu.html">Our Menu</a></li>
                         <li><a href="catering.html">Catering Orders</a></li>
                         <li><a href="locations.html">Locations</a></li>
